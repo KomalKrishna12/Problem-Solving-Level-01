@@ -21,6 +21,7 @@ public class loop {
                  break;
              }
          }
+         scanner.close();
         
 
     }
