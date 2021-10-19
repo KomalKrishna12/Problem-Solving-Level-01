@@ -16,5 +16,6 @@ public class InverseNumber {
             op++;
         }
         System.out.println("Inverse : " + inv);
+        scn.close();
     }
 }
