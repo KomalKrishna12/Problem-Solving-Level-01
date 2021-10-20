@@ -12,7 +12,8 @@ public class Q20_Increment_Operator {
         }
 
         int j = 20; //++j means first increment done then value assign
-        if(++j == j)//(21 == 21) true so if part will execute
+        int y = ++j;
+        if(y == j)//(21 == 21) true so if part will execute
         {
             System.out.println(j + " is good.");
         }
