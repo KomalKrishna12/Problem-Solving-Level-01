@@ -17,5 +17,6 @@ public class Q16_GCD_LCM_Brute_Force{
         int lcm = (on1 * on2) / gcm;
         System.out.println("GCM of " + on1 + " & " + on2 + " is : " + gcm);
         System.out.println("LCM of " + on1 + " & " + on2 + " is : " + lcm);
+        scn.close();
      }
 }
