@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.lang.model.element.Element;
-
 public class Q18_Pythgorean_Triplet {
     public static void main(String[] args) {
         
