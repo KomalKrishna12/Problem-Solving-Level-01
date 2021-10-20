@@ -1,4 +1,4 @@
-public class EvenOdd {
+public class Q01_EvenOdd {
     
     public static void main(String[] args) {
         

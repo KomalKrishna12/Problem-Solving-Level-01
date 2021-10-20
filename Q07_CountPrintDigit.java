@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CountPrintDigit {
+public class Q07_CountPrintDigit {
  
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

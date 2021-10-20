@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Q16_GCD_LCM_Brute_Force{
+public class Q11_GCD_LCM_Brute_Force{
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);

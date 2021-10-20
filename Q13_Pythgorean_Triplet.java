@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Q18_Pythgorean_Triplet {
+public class Q13_Pythgorean_Triplet {
     public static void main(String[] args) {
         
         Scanner scn = new Scanner(System.in);

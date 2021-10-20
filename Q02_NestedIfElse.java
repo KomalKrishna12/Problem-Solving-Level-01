@@ -1,4 +1,4 @@
-public class NestedIfElse {
+public class Q02_NestedIfElse {
     
     public static void main(String[] args) {
         

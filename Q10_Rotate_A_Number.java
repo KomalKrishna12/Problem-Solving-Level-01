@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Q15_Rotate_A_Number {
+public class Q10_Rotate_A_Number {
     
     public static void main(String[] args) {
         

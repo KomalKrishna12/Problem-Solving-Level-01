@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Q17_Prime_Factorization_Of_A_Number {
+public class Q12_Prime_Factorization_Of_A_Number {
     
     public static void main(String[] args) {
         

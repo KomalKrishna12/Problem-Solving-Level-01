@@ -1,4 +1,4 @@
-public class Q20_Increment_Operator {
+public class Q15_Increment_Operator {
     
     public static void main(String[] args) {
         

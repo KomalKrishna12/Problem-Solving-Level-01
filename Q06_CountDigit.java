@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CountDigit {
+public class Q06_CountDigit {
     
     public static void main(String[] args) {
         

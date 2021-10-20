@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Q19_Benjamin_Bulbs {
+public class Q14_Benjamin_Bulbs {
     
     public static void main(String[] args) {
         

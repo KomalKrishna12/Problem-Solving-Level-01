@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class loop {
+public class Q03_loop {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = Integer.parseInt(scanner.nextLine());
