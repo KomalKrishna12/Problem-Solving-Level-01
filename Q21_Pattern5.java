@@ -26,6 +26,7 @@ public class Q21_Pattern5 {
             }
             System.out.println();
         }
+        scn.close();
     }
 
 }
