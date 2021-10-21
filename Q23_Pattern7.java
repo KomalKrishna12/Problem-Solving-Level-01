@@ -16,5 +16,6 @@ public class Q23_Pattern7 {
             }
             System.out.println();
         }
+        scn.close();
     }
 }
