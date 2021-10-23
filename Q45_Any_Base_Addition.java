@@ -6,10 +6,10 @@ public class Q45_Any_Base_Addition{
         int b = scn.nextInt();
         int n1 = scn.nextInt();
         int n2 = scn.nextInt();
-        System.out.println(getValue(b,n1,n2));
+        System.out.println(getSum(b,n1,n2));
         scn.close();
     }
-    public static int getValue(int b, int n1, int n2){
+    public static int getSum(int b, int n1, int n2){
         int rv = 0;
         int c = 0;
         int pow = 1;
