@@ -7,14 +7,16 @@ public class Q82_String_With_Diff_Of_Two_Consecutive_No{
         scn.close();
     }
     public static String solution(String str) {
-        String s = str.charAt(0) + "";
-        int diff = 0;
+        StringBuilder sb = new StringBuilder();
+        sb.append(str.charAt(0));
+        int gap = 0;
         for (int i = 1; i < str.length(); i++) {
-            char cur = str.charAt(i);
-            char pre = str.charAt(i-1);
-            diff = cur - pre;
-            s = s + diff + cur;
+            char curr = str.charAt(i);
+            char prev = str.charAt(i-1);
+            gap = curr - prev;
+            sb.append(gap);
+            sb.append(curr);
         }
-        return s;
+        return sb.toString();
     }
 }
