@@ -10,7 +10,7 @@ public class Q101_Get_Stairs_Paths {
         scn.close();
     }
     public static ArrayList<String> getStairs(int n) {
-        if(n == 0){//if n == 0 that means we reached the destination so we return empty path which represen 
+        if(n == 0){//if n == 0 that means we reached the destination so we return empty path which represent 
             // one way to reach n that is stay there
             ArrayList<String> list = new ArrayList<>();
             list.add("");
