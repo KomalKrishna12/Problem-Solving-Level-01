@@ -3,11 +3,15 @@ import java.util.Scanner;
 public class Q5_Merge_Sort {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
+        //n is size of array
         int n = scn.nextInt();
+        //create array a of size n
         int[] a = new int[n];
+        //get elements of array a
         for (int i = 0; i < a.length; i++) {
             a[i] = scn.nextInt();
         }
+        //sort the array using merge sort
         int[] res = mergeSort(a, 0, a.length-1);
         print(res);
         scn.close();
@@ -18,6 +22,9 @@ public class Q5_Merge_Sort {
             System.out.println(arr[i]);
         }
     }
+    //in merge sort we divide the array into two part using mid index
+    //then sort that two divided array
+    //merge these two sorted array using mergeTwoSortedArr function
     public static int[] mergeSort(int[] arr, int low, int high){
         if(low == high){
             int[] baseCase = new int[1];
