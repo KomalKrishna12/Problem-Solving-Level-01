@@ -23,6 +23,9 @@ public class Q3_Insertion_Sort {
             System.out.println(arr[i]);
         }
     }
+    //in this sort we assume that the first element is already sorted and then start loop from index 1 to 
+    //till end then in inner loop we start comparing with left side element and sort according to
+    //the smallest and largest element position
     public static void insertionSort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
             for (int j = i - 1; j >= 0; j--) {
