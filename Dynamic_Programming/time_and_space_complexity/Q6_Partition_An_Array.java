@@ -20,6 +20,10 @@ public class Q6_Partition_An_Array{
         //third j to i-1  -> > pivot
         int i = 0;
         int j = 0;
+        //firstly we check the unknown array that any element is their or not
+        //then we compare the ith element with pivot
+        //if element is greater than arr[i] then simply increase i 
+        //if element is less than or equal to pivot then swap i with j and increase both i and j
         while(i < arr.length){
             if(arr[i] > pivot){
                 i++;
