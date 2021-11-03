@@ -8,8 +8,12 @@ public class Q7_Quick_Sort {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = scn.nextInt();
         }
+        quickSort(arr);
         print(arr);
         scn.close();
+    }
+    public static void quickSort(int[] arr) {
+        
     }
     public static void print(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
