@@ -12,6 +12,9 @@ public class Q7_Quick_Sort {
         print(arr);
         scn.close();
     }
+    //in quick sort we use partition of an array approach, but here we're passing last element of an array 
+    //in pivot and then sort the array with index 0 to pivot - 1 and pivot + 1 to high using
+    //quick sort function by passing high value as pivot - 1 and in second low value as pivot + 1
 
     public static void swap(int[] arr, int i, int j) {
         System.out.println("Swapping " + arr[i] + " and " + arr[j]);
