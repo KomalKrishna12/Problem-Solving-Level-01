@@ -15,6 +15,13 @@ public class Q14_Target_Sum_Pairs {
     }
 
     public static void targetSumPairs(int[] arr, int target) {
+        //this function is use to sort the array
+        //after sorting it becomes easy to find pairs whose sum is equal to target
+        //initiaize left index li with 0 and right index ri with arr.length - 1
+        //when sum of arr[li] and arr[ri] > target then ri--
+        //when sum of arr[li] and arr[li] < target then li++
+        //when sum is eqaul to target then print arr[li] and arr[ri] and li++ and ri-- to find
+        //another pair whose sum is equal to target
         Arrays.sort(arr);
         int li = 0;
         int ri = arr.length - 1;
