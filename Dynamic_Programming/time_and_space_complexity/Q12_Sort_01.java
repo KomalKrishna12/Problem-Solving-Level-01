@@ -22,6 +22,9 @@ public class Q12_Sort_01 {
     //array is filled with 0's and 1's. firstly we place both i and j pointer to 0th index
     //when arr[i] == 1 we simply increament the value of i with 1
     //when arr[i] == 0 firstly we swap value of i and j then increament both i and j with 1
+    //assume that i to end - unknown array
+    // j to i - 1 - array contains 1's
+    // 0 to j - 1 - array contains 0's
     public static void sort(int[] arr) {
         int i = 0;
         int j = 0;
