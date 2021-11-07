@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Q15_Pivot_In_Sorted_And_Rotated_Array {
