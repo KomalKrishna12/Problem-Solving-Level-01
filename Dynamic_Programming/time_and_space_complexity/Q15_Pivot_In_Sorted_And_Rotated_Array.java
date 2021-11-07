@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Q15_Pivot_In_Sorted_And_Rotated_Array {
@@ -12,8 +13,8 @@ public class Q15_Pivot_In_Sorted_And_Rotated_Array {
         scn.close();
     }
     public static void print(int[] arr) {
-        for (int index = 0; index < arr.length; index++) {
-            System.out.print(arr[index] + " ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
         }
     }
 }
