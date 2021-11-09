@@ -13,7 +13,7 @@ public class Q4_Climb_Stairs_With_Minimum_Moves {
         for (int i = n - 1; i >= 0; i--) {
             if(arr[i] > 0){
                 int min = Integer.MAX_VALUE;
-                for (int j = 1; j <= arr[i]; j++) {
+                for (int j = 1 ; j <= arr[i] && i + j < dp.length ; j++) {
                     if(dp[i+j] != null){
                         min = Math.min(min, dp[i+j]);
                     }
