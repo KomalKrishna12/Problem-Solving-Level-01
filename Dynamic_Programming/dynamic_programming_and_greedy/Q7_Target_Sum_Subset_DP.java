@@ -22,10 +22,21 @@ public class Q7_Target_Sum_Subset_DP{
                     dp[i][j] = true;
                 }
                 else{
-                    
+                    if(dp[i-1][j] == true){
+                        dp[i][j] = true;
+                    }
+                    else{
+                        int val = arr[i-1];
+                        if(j>=val){
+                            if(dp[i-1][j-val]==true){
+                                dp[i][j] = true;
+                            }
+                        }
+                    }
                 }
             }
         }
+        System.out.println(dp[arr.length][tar]);
         scn.close();
     }
 }
