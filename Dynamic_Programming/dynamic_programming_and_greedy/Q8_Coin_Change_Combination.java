@@ -9,6 +9,9 @@ public class Q8_Coin_Change_Combination {
             arr[i] = scn.nextInt();
         }
         int dp[] = new int[n+1];
+        for(int i = 0; i < dp.length; i++){
+            
+        }
         scn.close();
     }
 }
