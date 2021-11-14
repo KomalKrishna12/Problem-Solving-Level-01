@@ -9,5 +9,9 @@ public class Q8_Coin_Change_Combination {
             arr[i] = scn.nextInt();
         }
         scn.close();
+        isboolean();
+    }
+    public static void isboolean() {
+        System.out.println("boolean");
     }
 }
