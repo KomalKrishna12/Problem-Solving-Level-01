@@ -18,6 +18,15 @@ public class Q9_Coin_Change_Permutations {
                 }
             }
         }
+        // for (int i = 0; i < dp.length; i++) {
+        //     for (int coin : arr) {
+        //         if(coin <= i){
+        //             int remCoin = i - coin;
+        //             dp[i] += dp[remCoin];
+        //         }
+        //     }
+        // }
+
         System.out.println(dp[amt]);
         scn.close();
     }
