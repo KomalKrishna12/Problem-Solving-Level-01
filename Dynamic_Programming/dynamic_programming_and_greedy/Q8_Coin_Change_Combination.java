@@ -1,5 +1,8 @@
 import java.util.Scanner;
-
+//to apply dp three steps required
+//1->storage and management
+//2->direction identify
+//3->solve the problem by full filling the array
 public class Q8_Coin_Change_Combination {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
