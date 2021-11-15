@@ -11,9 +11,11 @@ public class Q9_Coin_Change_Permutations {
         int amt = scn.nextInt();
         int[] dp = new int[amt+1];
         dp[0] = 1;
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = arr[i]; j < dp.length; j++) {
-                dp[j] += dp[j - arr[i]];
+        for(int i = 1; i < dp.length; i++){
+            for (int j = 0; j < arr.length; j++) {
+                if(arr[j] <= i){
+                    dp[i] += dp[i - arr[j]];
+                }
             }
         }
         System.out.println(dp[amt]);
