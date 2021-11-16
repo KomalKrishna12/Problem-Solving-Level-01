@@ -23,8 +23,11 @@ public class Q12_Count_Binary_Strings {
         // System.out.println(oldCountOnes + oldCountZeros);
 
         //SECOND APPROACH
+        //in this approach, we use two arrays one to store zeros end and other will store ones
         int[] oldZeros = new int[n + 1];
         int[] oldOnes = new int[n + 1];
+        //by default all index contains 0's
+        //first index will store one
         oldZeros[1] = 1;
         oldOnes[1] = 1;
         for (int i = 2; i < oldOnes.length; i++) {
