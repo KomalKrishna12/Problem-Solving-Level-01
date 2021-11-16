@@ -27,7 +27,7 @@ public class Q12_Count_Binary_Strings {
         int[] oldOnes = new int[n + 1];
         oldZeros[1] = 1;
         oldOnes[1] = 1;
-        for (int i = 0; i < oldOnes.length; i++) {
+        for (int i = 2; i < oldOnes.length; i++) {
             oldOnes[i] = oldOnes[i - 1] + oldZeros[i - 1];
             oldZeros[i] = oldOnes[i - 1];
         }
