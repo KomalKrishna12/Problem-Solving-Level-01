@@ -23,6 +23,8 @@ public class Q13_Arrange_Buildings {
         //at end we can print total^2 that means total*total beacuse in both side n plots are there and they
         //can either be in same order or different so if there is 10 way for one side there is also 10 ways 
         //for other side so total will bcome 10*10 that is 100
+        //there is second approach also
+        
         total = total * total;
         System.out.println(total);
         scn.close();
