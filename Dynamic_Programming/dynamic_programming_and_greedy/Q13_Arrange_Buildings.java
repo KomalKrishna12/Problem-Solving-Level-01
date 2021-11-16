@@ -25,7 +25,11 @@ public class Q13_Arrange_Buildings {
         //for other side so total will bcome 10*10 that is 100
         //there is second approach also which we used in previous question
         //that is we can create two 1D array
-        //
+        //one for storing ways repected to index to contains building at last
+        //other for storing space
+        //in building array we can store building only when the last plot is space 
+        //because this is mentioned in question that two condsecuitve building can't be there
+        //but in space array we can store spaace in both cases either last plot is space or building
         total = total * total;
         System.out.println(total);
         scn.close();
