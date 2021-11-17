@@ -34,6 +34,7 @@ public class Q14_Count_Encoding{
                 //23-11 dp[i-2]
                 //dp[i] = dp[i-1] + dp[i-2]
                 //this substr will check that the substring is less than equal to 26
+                //Integer.pasrseInt wll convert the string into int
                 if(Integer.parseInt(str.substring(i-1, i+1))<=26){
                     dp[i] = dp[i-1] + (i>=2?dp[i-2]:1);
                 }
