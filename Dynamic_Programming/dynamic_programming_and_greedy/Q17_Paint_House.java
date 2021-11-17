@@ -19,7 +19,7 @@ public class Q17_Paint_House {
             dp[i][1] = Math.min(dp[i][2], dp[i][0]) + arr[i][1];
             dp[i][2] = Math.min(dp[i][1], dp[i][0]) + arr[i][2];
         }
-        int ans = Math.min(dp[n][1], Math.min(dp[n][2], dp[n][0]));
+        int ans = Math.min(dp[n-1][0], Math.min(dp[n-1][1], dp[n-1][2]));
         System.out.println(ans);
         scn.close();
     }
