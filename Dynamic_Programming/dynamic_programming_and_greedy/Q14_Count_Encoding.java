@@ -15,15 +15,15 @@ public class Q14_Count_Encoding{
             }
             else if(str.charAt(i-1) != '0' && str.charAt(i) == '0'){
                 if(str.charAt(i-1) <= 2){
-                    dp[i] = dp[i-2];
+                    dp[i] = (i>=2?dp[i-2]:1);
                 }
                 else{
                     dp[i] = 0;
                 }
             }
             else{
-                if(str.charAt(i-1) <= 2){
-                    dp[i] = dp[i-1] + dp[i-2];
+                if(Integer.parseInt(str.substring(i-1, i+1))<=26){
+                    dp[i] = dp[i-1] + (i>=2?dp[i-2]:1);
                 }
                 else{
                     dp[i] = dp[i-1];
