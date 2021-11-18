@@ -10,7 +10,7 @@ public class Q22_Friends_Pairing {
         dp[2] = 2;
 
         for (int i = 3; i < dp.length; i++) {
-            dp[i] = dp[i-1] + (n-1)*dp[i-2];
+            dp[i] = dp[i-1] + (i-1)*dp[i-2];
         }
         System.out.println(dp[n]);
 
