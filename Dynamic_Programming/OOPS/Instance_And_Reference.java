@@ -16,5 +16,10 @@ public class Instance_And_Reference{
         p2.name = "B";
         p2.age = 20;
         p2.saysHi();
+
+        Person p3 = p1;
+        p3.name = "C";
+        p3.saysHi();
+        p1.saysHi();
     }
 }
