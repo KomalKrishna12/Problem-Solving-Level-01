@@ -27,7 +27,7 @@ public class Q3_Balanced_Brackets{
                 }
             }
             else if(ch == ']'){
-                boolean val = handleOpenChar(st, ']');
+                boolean val = handleOpenChar(st, '[');
                 if(val == false){
                     System.out.println(val);
                     return;
