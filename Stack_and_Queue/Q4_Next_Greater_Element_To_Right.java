@@ -16,8 +16,8 @@ public class Q4_Next_Greater_Element_To_Right {
         display(ans);
     }
     public static void display(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+        for (int i : arr) {
+            System.out.println(i);
         }
     }
     public static int[] solve(int[] arr) {
