@@ -1,6 +1,17 @@
 import java.util.Scanner;
 import java.util.Stack;
-
+//in this question we have to find max area 
+//like arr -> 6, 2, 5, 4, 5, 1, 6
+//like in this example element 4 area will be 4*3 because 4th right index till 1 and right till 2
+//so width = right index - left index - 1
+//area = width * arr[i]
+//so we create two array rightindex and leftindex rightindex will show right side small index values
+//leftindex will show left side small value
+//if there is no right small value then store arr.length
+//if there is no left small value then store -1
+//then start loop from 0 to arr.length
+//then calculate with and area and compare with each element area
+//display max area
 public class Q6_Largest_Area_Historgm {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
