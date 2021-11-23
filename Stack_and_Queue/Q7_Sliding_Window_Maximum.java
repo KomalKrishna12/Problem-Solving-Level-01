@@ -32,15 +32,16 @@ public class Q7_Sliding_Window_Maximum {
         }
 
         int j = 0;
-        for (int i = 0; i < arr.length - k; i++) {
+        for (int i = 0; i <= arr.length - k; i++) {
             if(j < i){
                 j = i;
             }
             while(nextGreater[j] < i+k){
                 j = nextGreater[j];
             }
+            System.out.println(arr[j]);
         }
-        System.out.println(arr[j]);
+        
 
     }
 }
