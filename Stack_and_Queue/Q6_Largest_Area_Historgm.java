@@ -27,7 +27,7 @@ public class Q6_Largest_Area_Historgm {
         st.push(arr.length-1);
         rightSmallestIndex[arr.length-1] = arr.length;
         for (int i = arr.length - 2; i >= 0; i--) {
-            while(st.size() > 0 && arr[i] < arr[st.peek()]){
+            while(st.size() > 0 && arr[i] <= arr[st.peek()]){
                 st.pop();
             }
             if(st.size() == 0){
@@ -40,20 +40,20 @@ public class Q6_Largest_Area_Historgm {
         }
 
         int[] leftSmallestIndex = new int[n];
-        Stack<Integer> st2 = new Stack<>();
-        st2.push(0);
+        st = new Stack<>();
+        st.push(0);
         leftSmallestIndex[0] = -1;
         for (int i = 1; i < n; i++) {
-            while(st2.size() > 0 && arr[i] < arr[st2.peek()]){
-                st2.pop();
+            while(st.size() > 0 && arr[i] <= arr[st.peek()]){
+                st.pop();
             }
-            if(st2.size() == 0){
+            if(st.size() == 0){
                 leftSmallestIndex[i] = -1;
             }
             else{
-                leftSmallestIndex[i] = st2.peek();
+                leftSmallestIndex[i] = st.peek();
             }
-            st2.push(i);
+            st.push(i);
         }
 
         int maxArea = 0;
