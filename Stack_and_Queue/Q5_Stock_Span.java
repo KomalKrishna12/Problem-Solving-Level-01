@@ -1,6 +1,15 @@
 import java.util.Scanner;
 import java.util.Stack;
-
+//this is same question like before we solve next greater element to right
+//here we have to find next greater elment to left if there is no greater element then store i + 1
+//for first element we store 1 becoz there is no greater element at left so we store i + 1 and for first 
+//element i is 0 and add i in stack bcoz we want to perform operations on index
+//create loop for 1 to n
+//if stack is not empty and arr[st.peek()] < arr[i] then pop the st.peek () value
+//at end check wheather the stack is empty or not
+//if empty that means no greater element at right so store i + 1
+//else store span (diff between i and st.peek()) for that index
+//at end push ith index
 public class Q5_Stock_Span{
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
