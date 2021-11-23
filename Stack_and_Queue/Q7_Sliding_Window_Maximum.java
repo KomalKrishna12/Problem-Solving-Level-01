@@ -9,6 +9,7 @@ public class Q7_Sliding_Window_Maximum {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = scn.nextInt();
         }
+        int k = scn.nextInt();
         scn.close();
         solve(arr, k);
     }
