@@ -80,13 +80,19 @@ public class Q8_Infix_Evaluation {
     //'+' and '-' having same precedence but having less precedence than '*' and '/'
     //'*' and '/' having same precedence
     public static int precedence(char ch) {
-        if (ch == '+') {
+        // if (ch == '+') {
+        //     return 1;
+        // } else if (ch == '-') {
+        //     return 1;
+        // } else if (ch == '*') {
+        //     return 2;
+        // } else {
+        //     return 2;
+        // }
+        if(ch == '+' || ch == '-'){
             return 1;
-        } else if (ch == '-') {
-            return 1;
-        } else if (ch == '*') {
-            return 2;
-        } else {
+        }
+        else{
             return 2;
         }
     }
@@ -102,5 +108,6 @@ public class Q8_Infix_Evaluation {
         } else {
             return v1 / v2;
         }
+        
     }
 }
