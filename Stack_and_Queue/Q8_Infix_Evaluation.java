@@ -45,7 +45,7 @@ public class Q8_Infix_Evaluation {
             int val = operation(v1, v2, chr);
             operands.push(val);
         }
-        System.out.println(operands.peek());
+        System.out.println(operands.pop());
     }
 
     public static int precedence(char ch) {
