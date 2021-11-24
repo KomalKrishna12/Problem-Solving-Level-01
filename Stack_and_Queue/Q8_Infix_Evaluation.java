@@ -18,9 +18,9 @@ public class Q8_Infix_Evaluation {
             }
             else if(ch == ')'){
                 while(operators.peek() != '('){
-                    int v2 = operands.peek();
-                    int v1 = operands.peek();
-                    char chr = operators.peek();
+                    int v2 = operands.pop();
+                    int v1 = operands.pop();
+                    char chr = operators.pop();
                     int val = operation(v1, v2, chr);
                     operands.push(val);
                 }
@@ -29,9 +29,9 @@ public class Q8_Infix_Evaluation {
             else if(ch == '+' || ch == '-' || ch == '*' || ch == '/'){
                 while(operators.size() > 0 && operators.peek() != '(' && 
                 precedence(ch) <= precedence(operators.peek())){
-                    int v2 = operands.peek();
-                    int v1 = operands.peek();
-                    char chr = operators.peek();
+                    int v2 = operands.pop();
+                    int v1 = operands.pop();
+                    char chr = operators.pop();
                     int val = operation(v1, v2, chr);
                     operands.push(val);
                 }
@@ -39,9 +39,9 @@ public class Q8_Infix_Evaluation {
             }
         }
         while(operators.size() > 0){
-            int v2 = operands.peek();
-            int v1 = operands.peek();
-            char chr = operators.peek();
+            int v2 = operands.pop();
+            int v1 = operands.pop();
+            char chr = operators.pop();
             int val = operation(v1, v2, chr);
             operands.push(val);
         }
