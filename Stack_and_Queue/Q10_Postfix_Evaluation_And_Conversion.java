@@ -35,6 +35,9 @@ public class Q10_Postfix_Evaluation_And_Conversion {
                 prefix.push(prev);
             }
         }
+        System.out.println(value.pop());
+        System.out.println(infix.pop());
+        System.out.println(prefix.pop());
     }
 
     public static int operation(int v1, int v2, char ch) {
