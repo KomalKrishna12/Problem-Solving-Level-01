@@ -9,7 +9,10 @@ import java.util.Stack;
 //postfix exp : ab+
 //so we create three stack one Integer stack to store value of expression
 //and rest two for infix and postfix expression
-//start loop from i = 0 to exp.length()
+//start loop from i = exp.length()-1 to 0
+//because in prefix exp opr are presend at first space so we evalaute from end and here pop v1 first
+//because we are reading string from end 
+//for eg exp : -ab so we push b then a so when we pop we get a that is our first value so we consider it as v1
 //if ch == any digit then simply push it into all three array
 //if ch == '+' || '-' || '*' || '/' then calculate v1 and v2 and then val and then push into corresponding 
 //stack.
