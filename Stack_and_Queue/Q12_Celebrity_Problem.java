@@ -20,6 +20,18 @@ public class Q12_Celebrity_Problem {
         for (int i = 0; i < arr.length; i++) {
             st.push(i);
         }
+        while(st.size() >= 2){
+            int i = st.pop();
+            int j = st.pop();
+            if(arr[i][j] == 1){
+                //if i know j then i can't be a celebrity so push j
+                st.push(j);
+            }
+            else if(arr[i][j] == 0){
+                //if i don't know j then j can't be a celebrity so push i
+                st.push(i);
+            }
+        }
         int potentialCeleb = st.pop();
         for (int i = 0; i < arr.length; i++) {
             if(i != potentialCeleb)
