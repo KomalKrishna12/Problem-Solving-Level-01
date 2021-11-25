@@ -29,6 +29,11 @@ public class Q11_Prefix_Evaluation_And_Conversion {
                 String pv = pv1 + pv2 + ch;
                 postfix.push(pv);
             }
+            else{
+                value.push(ch-'0');
+                infix.push(ch+"");
+                postfix.push(ch+"");
+            }
         }
 
         System.out.println(value.pop());
