@@ -1,7 +1,7 @@
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-public class Q15_Queue_Basic_Functions{
+public class Q16_Queue_Basic_Functions{
     public static void main(String[] args) {
         Queue<Integer> queue = new ArrayDeque<>();
 
