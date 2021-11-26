@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Stack;
+
 //in this ques we have two stack that means we have LIFO structure and we want to adapt
 //FIFO which is of Queue
 //and add effeceint means add has to be in o(1)
@@ -24,26 +25,36 @@ public class Q21_Stack_To_Queue_Adapter_Add_Effecient {
         }
 
         int remove() {
-            while(mainS.size() > 1){
-                helperS.push(mainS.pop());
+            if (mainS.size() == 0) {
+                System.out.println("Queue underflow");
+                return -1;
+            } else {
+                while (mainS.size() > 1) {
+                    helperS.push(mainS.pop());
+                }
+                int val = mainS.pop();
+                while (helperS.size() > 0) {
+                    mainS.push(helperS.pop());
+                }
+                return val;
             }
-            int val = mainS.pop();
-            while (helperS.size() > 0) {
-                mainS.push(helperS.pop());
-            }
-            return val;
         }
 
         int peek() {
-            while(mainS.size() > 1){
-                helperS.push(mainS.pop());
+            if (mainS.size() > 0) {
+                System.out.println("Queue underflow");
+                return -1;
+            } else {
+                while (mainS.size() > 1) {
+                    helperS.push(mainS.pop());
+                }
+                int val = mainS.pop();
+                helperS.push(val);
+                while (helperS.size() > 0) {
+                    mainS.push(helperS.pop());
+                }
+                return val;
             }
-            int val = mainS.pop();
-            helperS.push(val);
-            while (helperS.size() > 0) {
-                mainS.push(helperS.pop());
-            }
-            return val;
         }
     }
 
