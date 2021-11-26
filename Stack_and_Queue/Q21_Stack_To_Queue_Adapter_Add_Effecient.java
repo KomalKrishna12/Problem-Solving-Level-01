@@ -41,7 +41,7 @@ public class Q21_Stack_To_Queue_Adapter_Add_Effecient {
         }
 
         int peek() {
-            if (mainS.size() > 0) {
+            if (mainS.size() == 0) {
                 System.out.println("Queue underflow");
                 return -1;
             } else {
