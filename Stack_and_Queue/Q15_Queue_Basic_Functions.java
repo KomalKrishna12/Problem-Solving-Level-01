@@ -16,5 +16,6 @@ public class Q15_Queue_Basic_Functions{
         System.out.println(queue);
 
         System.out.println(queue.remove());
+        System.out.println(queue);
     }
 }
