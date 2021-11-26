@@ -25,6 +25,9 @@ public class Q21_Stack_To_Queue_Adapter_Add_Effecient {
         }
 
         int remove() {
+            //pop mainS to helperS except last element
+            //store last element in val
+            //now push all helperS element to mainS and return val which is poped from this
             if (mainS.size() == 0) {
                 System.out.println("Queue underflow");
                 return -1;
