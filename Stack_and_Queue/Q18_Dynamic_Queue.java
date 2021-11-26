@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
+//dynamic queue means when queue is full we display "Queue overflow" in that place we have to
+//create a new array with double size and add all element into it and then assign it to old one
 public class Q18_Dynamic_Queue {
 
     public static class CustomQueue{
