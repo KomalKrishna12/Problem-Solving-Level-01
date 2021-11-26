@@ -2,7 +2,17 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.Queue;
-
+//in this ques we try to implement stack behaviour using two queue
+//so push and size will work normally
+//for pop and top
+//for top :
+//we push all elements of mainQ into helperQ except last one then store last element into val and add 
+//that also then again add all element of helperQ to mainQ and return val that is the last element
+//for pop :
+//this will same as top but when we store val from last element don't add that into helper stack bcoz
+//we want to pop last element
+//here push effeceinet means work on pop and top for making stack
+//so we can easily push the value
 public class Q19_Queue_To_Stack_Adapter_Push_Effecient {
 
     public static class QueueToStackAdapter{
