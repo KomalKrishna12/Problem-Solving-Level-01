@@ -84,6 +84,10 @@ public class Q5_Add_First_Linked_List {
     
         public void addFirst(int val) {
           //firstly create the node temp
+          //assign data of temp as val
+          //if size of list is zero then that node become head as well as tail
+          //else temp.next will be head and now assign head to temp node
+          //at end increase the size 
           Node temp = new Node();
           temp.data = val;
           if(size == 0){
