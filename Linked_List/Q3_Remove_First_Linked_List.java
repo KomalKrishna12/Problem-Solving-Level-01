@@ -63,18 +63,20 @@ public class Q3_Remove_First_Linked_List {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         LinkedList list = new LinkedList();
-
+    
         String str = br.readLine();
         while (str.equals("quit") == false) {
-            if (str.startsWith("addLast")) {
-                int val = Integer.parseInt(str.split(" ")[1]);
-                list.addLast(val);
-            } else if (str.startsWith("size")) {
-                System.out.println(list.size());
-            } else if (str.startsWith("display")) {
-                list.display();
-            }
-            str = br.readLine();
+          if (str.startsWith("addLast")) {
+            int val = Integer.parseInt(str.split(" ")[1]);
+            list.addLast(val);
+          } else if (str.startsWith("size")) {
+            System.out.println(list.size());
+          } else if (str.startsWith("display")) {
+            list.display();
+          } else if (str.startsWith("removeFirst")) {
+            list.removeFirst();
+          }
+          str = br.readLine();
         }
-    }
+      }
 }
