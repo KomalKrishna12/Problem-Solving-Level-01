@@ -162,6 +162,11 @@ public class Q9_Reverse_A_Linked_List_Data_Iterative {
         }
     
         public void reverseDI() {
+            //we create two pointers left index and right index
+            //suppose size is 5 so li = 0 and ri = 4
+            //run a while loop till li < ri
+            //using getNode function recive left and right node using li and ri
+            //and swap there data using temp variable and increase li and decrease ri 
             int li = 0;
             int ri = size - 1;
             while(li < ri){
