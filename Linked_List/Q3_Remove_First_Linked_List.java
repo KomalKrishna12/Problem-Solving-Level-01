@@ -51,7 +51,7 @@ public class Q3_Remove_First_Linked_List {
             System.out.println("List is empty");
             else if(size == 1){
                 head = tail = null;
-                size--;
+                size = 0;
             }
             else{
                 head = head.next;
