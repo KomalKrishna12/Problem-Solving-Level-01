@@ -47,6 +47,10 @@ public class Q3_Remove_First_Linked_List {
         }
 
         public void removeFirst() {
+            //if size is 0 that means no elements in linked list
+            //if size is 1 then after removig only null value avialable so set haid and tail to null
+            //and decrease size with 1
+            //else point head to head.next and decrese size by 1
             if(size == 0)
             System.out.println("List is empty");
             else if(size == 1){
