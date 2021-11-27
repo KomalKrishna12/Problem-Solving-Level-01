@@ -13,6 +13,12 @@ public class Q1_Add_Last_Linked_List {
         int size;
 
         public void addLast(int val) {
+            //for inserting new node we are creating a node temp
+            //assigning val to the node
+            //next of temp will be null
+            //now if size == 0 that mean it is first node so head and tail both will point to
+            //temp node
+            //else tail.next will be temp and then assign temp as tail
             Node temp = new Node();
             temp.data = val;
             temp.next = null;
