@@ -204,6 +204,15 @@ public class Q13_Kth_Node_From_End_Of_Linked_List {
             //run a for loop from 0 to k and place fast at kth position
             //now run a while loop till fast is not at tail
             //when fast is at tail then return small.data that points the kth node from tail
+            if(head == null){
+              return -1;
+            }
+            //below code denotes that if size of our linklist is let say 2 and k is 5 
+            //now we are asking for 5th element but we've only 2 nodes so we return -1
+            //otherwise it'll give NullPointerException
+            if(size < k){
+              return -1;
+            }
             Node slow = head;
             Node fast = head;
             for (int i = 0; i < k; i++) {
