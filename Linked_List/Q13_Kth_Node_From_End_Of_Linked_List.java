@@ -198,6 +198,12 @@ public class Q13_Kth_Node_From_End_Of_Linked_List {
         }
       
         public int kthFromLast(int k){
+            //so here we want to return the kth node from end
+            //without using size
+            //so we create two nodes slow and fast
+            //run a for loop from 0 to k and place fast at kth position
+            //now run a while loop till fast is not at tail
+            //when fast is at tail then return small.data that points the kth node from tail
             Node slow = head;
             Node fast = head;
             for (int i = 0; i < k; i++) {
