@@ -1,6 +1,9 @@
 import java.io.*;
 import java.util.LinkedList;
-
+//in linked list we can add nodes at first or end or remove or get so to 
+//adapt it as stack we can use all first functions or last functions
+//but first function is more efective having 0(1) complexity
+//like in addLast to get last element we have to run a for loop to get last index
 public class Q11_Linked_List_To_Stack_Adapter {
     public static class LLToStackAdapter {
         LinkedList<Integer> list;
