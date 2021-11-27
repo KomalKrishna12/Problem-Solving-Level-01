@@ -51,15 +51,47 @@ public class Q4_Get_Value_In_Linked_List {
       }
   
       public int getFirst(){
-        // write your code here
+          if(size == 0){
+              System.out.println("List is empty");
+              return -1;
+          }
+          else{
+              return head.data;
+          }
       }
   
       public int getLast(){
-        // write your code here
+        if(size == 0){
+            System.out.println("List is empty");
+            return -1;
+        }
+        else{
+            return tail.data;
+        }
       }
   
       public int getAt(int idx){
-        // write your code here
+          //if size is empty then print "list is empty" and return -1
+          //if size is greater tahn idx and equal to idx or less than 0 then print "invalid arg"
+          //and return -1
+          //else create a temp node assign head to it
+          //now run loop from 0 to idx
+          //temp = temp.next and return temp.data
+        if(size == 0){
+            System.out.println("List is empty");
+            return -1;
+        }
+        else if(idx < 0 || idx >= size){
+            System.out.println("invalid arguments");
+            return -1;
+        }
+        else{
+            Node temp = head;
+            for (int i = 0; i < idx; i++) {
+                temp = temp.next;
+            }
+            return temp.data;
+        }
       }
     }
   
