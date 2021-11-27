@@ -225,6 +225,12 @@ public class Q14_Mid_Of_Linked_List {
                 slow = slow.next;
                 fast = fast.next.next;
             }
+            //for even if we want to print second middle then we take fast != null condition
+            //instead of fast.next.next != null
+            // while(fast.next != null && fast != null){
+            //     slow = slow.next;
+            //     fast = fast.next.next;
+            // }
             return slow.data;
         }
       }
