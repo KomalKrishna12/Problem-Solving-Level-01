@@ -14,7 +14,28 @@ public class Q16_Remove_All_Duplicates_From_Sorted_Linked_List {
     }
 
     public static ListNode removeDuplicates(ListNode head) {
-        return null;
+        if(head == null || head.next == null) return head;
+        ListNode dummy= new ListNode(-1);
+        ListNode itr = dummy;
+        ListNode curr = head.next;
+        itr.next = head;
+        while(curr != null){
+            boolean islooptrue = false;
+            while(curr != null && itr.next.val == curr.val){
+                islooptrue = true;
+                curr = curr.next;
+            }
+            if(islooptrue){
+                itr.next = curr;
+            }
+            else{
+                itr = itr.next;
+            }
+            if(curr != null){
+                curr = curr.next;
+            }
+        }
+        return dummy.next;
     }
 
     // InFput_code===================================================
