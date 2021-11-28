@@ -1,5 +1,7 @@
 import java.util.Scanner;
-
+// i/o : 1->7->2->6->3->5->4->null
+// o/p : 2->6->4->1->7->3->5->null
+//here we want to set even nodes before then odd in same order 
 public class Q19_Segregate_Even_Odd_Node_Linked_List {
     public static class ListNode {
         int val = 0;
