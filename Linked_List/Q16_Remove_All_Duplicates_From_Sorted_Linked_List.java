@@ -15,6 +15,18 @@ public class Q16_Remove_All_Duplicates_From_Sorted_Linked_List {
 
     public static ListNode removeDuplicates(ListNode head) {
         if(head == null || head.next == null) return head;
+        //create a dummy node with val -1 and point itr to dummy
+        //create curr point to head.next
+        //now assume itr.next = head
+        //start the loop
+        //create a boolean var islooptrue initialize it with false
+        //if curr.val == itr.next.val that means here is some duplicate values
+        //so set true in boolean varaible and point curr to curr.next now again check
+        //till itr.next.val != curr.next
+        //if condition false
+        //then check boolena variable if it is true then point itr.next to curr and if false 
+        //then set itr = itr.next
+        //again if curr != null then curr = curr.next
         ListNode dummy= new ListNode(-1);
         ListNode itr = dummy;
         ListNode curr = head.next;
