@@ -12,12 +12,21 @@ public class Q20_Merge_Two_Sorted_LL {
   }
 
   public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+      //firsly check that both list is not null if one is null then return second
     if (l1 == null || l2 == null)
       return l1 != null ? l1 : l2;
+      //now create a dummy list and set ptr = dummy
+      //create two listnode c1 and c2 that will point to l1 and l2 which is head of linked list
+
     ListNode dummy = new ListNode(-1);
     ListNode ptr = dummy;
     ListNode c1 = l1;
     ListNode c2 = l2;
+    //if both is not null then check data of c1 and c2
+    //is c1 is lesser than ptr.next will point to c1 else point to c2
+    //set ptr to ptr.next
+    //now there is chance that both list is of diff size so check which is not null and set ptr.next 
+    //to that list
     while(c1 != null && c2 != null){
         if(c1.val <= c2.val){
             ptr.next = c1;
