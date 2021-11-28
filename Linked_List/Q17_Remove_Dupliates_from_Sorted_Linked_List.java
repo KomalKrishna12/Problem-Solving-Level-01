@@ -15,6 +15,14 @@ public class Q17_Remove_Dupliates_from_Sorted_Linked_List {
 
     public static ListNode removeDuplicates(ListNode head) {
         if(head == null || head.next == null) return head;
+        //create a dummy node now create a itr node and curr node
+        //itr will point to dummy and curr will point to head
+        //start while loop till curr != null
+        //now again startt while loop for check duplicates while(curr != null && itr.val == curr.val)
+        //then move curr ahead
+        //afer loop end when itr.val != curr.val then assign itr.next to curr
+        //move itr at itr.next
+        //move curr to curr.next if curr != null
         ListNode dummy = new ListNode(-1);
         ListNode itr = dummy;
         ListNode curr = head.next;
