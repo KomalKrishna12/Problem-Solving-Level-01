@@ -37,7 +37,6 @@ public class Q19_Segregate_Even_Odd_Node_Linked_List {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
-        scn.close();
         ListNode dummy = new ListNode(-1);
         ListNode prev = dummy;
         while (n-- > 0) {
@@ -50,5 +49,6 @@ public class Q19_Segregate_Even_Odd_Node_Linked_List {
             System.out.print(head.val + " ");
             head = head.next;
         }
+        scn.close();
     }
 }
