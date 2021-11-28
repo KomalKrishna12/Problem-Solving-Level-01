@@ -266,6 +266,43 @@ public class Q15_Merge_Two_Sorted_Linked_List {
             return dummy.next;
         }
 
+        public static Node midNode(Node head) {
+            if(head == null || head.next == null) return head;
+            Node fast = head;
+            Node slow = head;
+            while(fast.next != null && fast.next.next != null){
+                fast = fast.next.next;
+                slow = slow.next;
+            }
+            return slow;
+        }
+
+        public static Node mergeSort(Node node) {
+
+            //so here we have given a node which point to head we want to sort the linked list
+            //using merge sort
+            //in merge sort we calculate mid then divide list into two parts and then merge
+            //both list using merge sorted linked list function
+            //if node is null or next of node is null then return node
+            //so firstly calculate mid using midNode(node)
+            //now new head will be mid.next 
+            //first part head will be node
+            //second part head will be node.next
+            //mid.next = null so it will terminate at mid
+            //now pass node and new head in merge sort
+            //and return mergeTwoLl
+            if(node == null || node.next == null) return node;
+
+            Node mid = midNode(node);
+            Node nhead = mid.next;
+            mid.next = null;
+
+            Node l1 = mergeSort(node);
+            Node l2 = mergeSort(nhead);
+
+            return mergeTwoLL(l1, l2);
+        }
+
         public static LinkedList mergeTwoSortedLists(LinkedList l1, LinkedList l2) {
             //this code is bad becoz addLast having o(n) complexity
             //while(n1 != null && n2 != null) having o(n+m)
