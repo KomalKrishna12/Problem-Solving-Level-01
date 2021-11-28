@@ -45,6 +45,19 @@ public class Q19_Segregate_Even_Odd_Node_Linked_List {
     }
 
     public static ListNode removeKthElement(ListNode head, int k) {
+        //suppose k = 2 so we want to remove 2nd element from end
+        //eg : 1 -> 2 -> 3, k = 2
+        //op : 1 -> 3
+        //if size of list and k is same then simply set head = head.next
+        //eg : 1 -> 2, k = 2
+        //op : 2
+        //create two pointer slow and fast both point to head;
+        //create a var c = 0
+        //while(c < k) set fast = fast.next and c++
+        //that will create a gap of k between slow ptr and fast ptr
+        //now create a listnode pre so that when we get kth node that prev will point to
+        //next of kth node
+        //while(fast != null) set prev = slow, slow = slow.next and fast = fast.next
         if(head == null) return head;
         int count = size(head);
         if(count == k){
@@ -64,6 +77,8 @@ public class Q19_Segregate_Even_Odd_Node_Linked_List {
             slow = slow.next;
             fast = fast.next;
         }
+        //at end slow is at kth index and prev is before slow so prev.next point to slow.next so that
+        //kth element will remove from the list
         prev.next = slow.next;
         return head;
     }
