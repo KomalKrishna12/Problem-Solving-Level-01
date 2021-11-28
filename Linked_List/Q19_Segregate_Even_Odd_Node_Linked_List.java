@@ -13,7 +13,25 @@ public class Q19_Segregate_Even_Odd_Node_Linked_List {
     }
 
     public static ListNode segregateEvenOdd(ListNode head) {
-        return null;
+        if(head == null || head.next == null) return head;
+        ListNode dummyEven = new ListNode(-1);
+        ListNode dummyOdd = new ListNode(-1);
+        ListNode eTail = dummyEven, oTail = dummyOdd, curr = head;
+        while(curr != null){
+            int value = curr.val;
+            if(value % 2 == 0){
+                eTail.next = curr;
+                eTail = eTail.next;
+            }
+            else{
+                oTail.next = curr;
+                oTail = oTail.next;
+            }
+            curr = curr.next;
+        }
+        eTail.next = dummyOdd.next;
+        oTail.next = null;
+        return dummyEven.next;
     }
 
     public static void main(String[] args) {
