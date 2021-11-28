@@ -34,6 +34,40 @@ public class Q19_Segregate_Even_Odd_Node_Linked_List {
         return dummyEven.next;
     }
 
+    public static int size(ListNode hNode) {
+        int c = 0;
+        ListNode temp = hNode;
+        while(temp != null){
+            c++;
+            temp = temp.next;
+        }
+        return c;
+    }
+
+    public static ListNode removeKthElement(ListNode head, int k) {
+        if(head == null) return head;
+        int count = size(head);
+        if(count == k){
+            head = head.next;
+            return head;
+        }
+        ListNode fast = head;
+        ListNode slow = head;
+        int c = 0;
+        while(c < k){
+            c++;
+            fast = fast.next;
+        }
+        ListNode prev = null;
+        while(fast != null){
+            prev = slow;
+            slow = slow.next;
+            fast = fast.next;
+        }
+        prev.next = slow.next;
+        return head;
+    }
+
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
@@ -43,11 +77,19 @@ public class Q19_Segregate_Even_Odd_Node_Linked_List {
             prev.next = new ListNode(scn.nextInt());
             prev = prev.next;
         }
+        int k = scn.nextInt();
 
         ListNode head = segregateEvenOdd(dummy.next);
         while (head != null) {
             System.out.print(head.val + " ");
             head = head.next;
+        }
+        System.out.println();
+
+        ListNode nhead = removeKthElement(dummy.next,k);
+        while(nhead != null){
+            System.out.print(nhead.val + " ");
+            nhead = nhead.next;
         }
         scn.close();
     }
