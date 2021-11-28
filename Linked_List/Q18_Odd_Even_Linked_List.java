@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
+// i/p : 2 8 9 1 5 4 3
+// o/p : 9 1 5 4 2 8 4
+//arrange in odd then even in same manner
 public class Q18_Odd_Even_Linked_List {
     public static class Node {
         int data;
