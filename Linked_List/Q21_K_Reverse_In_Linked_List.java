@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
+// i/p : 1 2 3 4 5 6 7 8 9 10 11 
+// o/p : 3 2 1 6 5 4 9 8 7 10 11 
+//k = 3
 public class Q21_K_Reverse_In_Linked_List {
     public static class Node {
         int data;
