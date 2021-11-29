@@ -58,8 +58,8 @@ public class Q26_Pallindrome_Linked_List {
         ListNode c1 = head;
         ListNode c2 = nhead;
 
-        // now we can put cond as c1 != null && c2 != null but c2 list is smaller in case of even
-        // and c2 is same in case of odd so we 
+        // now we can put cond as c1 != null && c2 != null but c2 list is smaller in case of odd
+        // and c2 is same in case of even so we 
         // can use c2 != null cond only 
         while(c2 != null){
 
