@@ -38,20 +38,30 @@ public class Q23_Reverse_Node_In_Linked_List_In_K_Group_Order {
 
     public static ListNode reverseInKGroup(ListNode head, int k) {
         if(head == null || head.next == null || k == 0) return head;
+        //firstly calculate the length using length function
         int len = length(head);
+        //create curr listnode to point head
+        //forw for storing curr.next for backhup and forward movement
+        //orghead and orgtail is our list which is reversed
         ListNode curr = head;
         ListNode forw = null;
         ListNode orgHead = null;
         ListNode orgTail = null;
+        //if len >= k then stor k in length and run inner loop till length > 0
         while(len >= k){
             int length = k;
             while(length-- > 0){
+                //store curr.next in forw
+                //now point curr.next to null so store curr in addFirst()
+                //now set curr at forw
                 forw = curr.next;
                 curr.next = null;
                 addFirstNode(curr);
 
                 curr = forw;
             }
+            //if orghead is null then temphead become orghead and temptail become orgtail
+            //else orgtail.next = temphead and orgtail become temptail
             if(orgHead == null){
                 orgHead = tempHead;
                 orgTail = tempTail;
@@ -60,10 +70,13 @@ public class Q23_Reverse_Node_In_Linked_List_In_K_Group_Order {
                 orgTail.next = tempHead;
                 orgTail = tempTail;
             }
+            //set temphead and temptail to null for next k group
+            //subract k from len
             tempHead = null;
             tempTail = null;
             len = len - k;
         }
+        //if less than k element present than connect orgtail to curr and return orghead
         orgTail.next = curr;
         return orgHead;
     }
