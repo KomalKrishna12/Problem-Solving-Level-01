@@ -12,8 +12,59 @@ public class Q23_Reverse_Node_In_Linked_List_In_K_Group_Order {
         }
     }
 
+    public static int length(ListNode head) {
+        ListNode node = head;
+        int len = 0;
+        while(node != null){
+            node = node.next;
+            len++;
+        }
+        return len;
+    }
+
+    static ListNode tempHead = null;
+    static ListNode tempTail = null;
+
+    public static void addFirstNode(ListNode node) {
+        if(tempHead == null){
+            tempHead = node;
+            tempTail = node;
+        }
+        else{
+            node.next = tempHead;
+            tempHead = node;
+        }
+    }
+
     public static ListNode reverseInKGroup(ListNode head, int k) {
-        return null;
+        if(head == null || head.next == null || k == 0) return head;
+        int len = length(head);
+        ListNode curr = head;
+        ListNode forw = null;
+        ListNode orgHead = null;
+        ListNode orgTail = null;
+        while(len >= k){
+            int length = k;
+            while(length-- > 0){
+                forw = curr.next;
+                curr.next = null;
+                addFirstNode(curr);
+
+                curr = forw;
+            }
+            if(orgHead == null){
+                orgHead = tempHead;
+                orgTail = tempTail;
+            }
+            else{
+                orgTail.next = tempHead;
+                orgTail = tempTail;
+            }
+            tempHead = null;
+            tempTail = null;
+            len = len - k;
+        }
+        return orgHead;
     }
 
     public static void printList(ListNode node) {
