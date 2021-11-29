@@ -14,6 +14,10 @@ public class Q9_Reverse_Linked_List {
         if(head == null || head.next == null){
             return head;
         }
+        // create a prev node whihc points to null
+        // create curr node which points to head it'll traverse the list
+        // create forw for storing curr.next in backup because to reverse we point curr.next to prev
+        // and for traverse we need to go on next of curr in linked list
         ListNode curr = head;
         ListNode prev = null;
         ListNode forw = null;
@@ -24,6 +28,7 @@ public class Q9_Reverse_Linked_List {
             prev = curr;
             curr = forw;
         }
+        // at end return prev that becomes our head
         return prev;
     }
 
