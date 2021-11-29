@@ -16,7 +16,7 @@ public class Q22_Mid_Node_Of_Linked_List {
         // slow will move one step while fast will move two step so fast will move at end at x step
         // and slow will be at x/2 that time slow is at our mid node
         // run loop till fast.next != null and fast.next.next != null the second
-        // cond is for getting first mid node in even nodes
+        // cond is for getting first mid node in even node
         if (head == null || head.next == null)
             return head;
         ListNode slow = head;
@@ -37,6 +37,7 @@ public class Q22_Mid_Node_Of_Linked_List {
             prev.next = new ListNode(scn.nextInt());
             prev = prev.next;
         }
+        scn.close();
 
         ListNode head = midNode(dummy.next);
         while (head != null) {
