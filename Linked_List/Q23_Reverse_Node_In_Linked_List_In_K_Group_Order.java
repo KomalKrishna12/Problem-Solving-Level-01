@@ -64,6 +64,7 @@ public class Q23_Reverse_Node_In_Linked_List_In_K_Group_Order {
             tempTail = null;
             len = len - k;
         }
+        orgTail.next = curr;
         return orgHead;
     }
 
