@@ -4,7 +4,7 @@ import java.util.Scanner;
 // m   : 5
 // o/p : 8 8 10 1 14 12 
 // we want to rverse from 3rd node to 5th node
-public class Q29_Reverse_In_A_Group_Linked_List {
+public class Q29_Reverse_In_A_Range_Linked_List {
     public static Scanner scn = new Scanner(System.in);
 
   public static class ListNode {
