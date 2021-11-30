@@ -26,6 +26,40 @@ public class Q28_Unfold_Linked_List {
         return prev;
     }
 
+    public static ListNode mid(ListNode node) {
+        ListNode fast = node;
+        ListNode slow = node;
+        while(fast.next != null && fast.next.next != null){
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return slow;
+    }
+
+    public static void fold(ListNode head) {
+        if(head == null || head.next == null) return;
+
+        ListNode mid = mid(head);
+        ListNode nhead = mid.next; // new head
+        mid.next = null;           // break link
+
+        nhead = reverse(nhead);
+
+        ListNode c1 = head;
+        ListNode c2 = nhead;
+        ListNode f1 = null, f2 = null;
+        while(c2 != null){
+            f1 = c1.next;
+            f2 = c2.next;
+
+            c1.next = c2;
+            c2.next = f1;
+
+            c1 = f1;
+            c2 = f2;
+        }
+    }
+
     // create two node first head(fh) and second head(sh)
     // fh point to head and sh point to head.next
     // ft is tail of fh and st is tail of sh 
@@ -77,6 +111,7 @@ public class Q28_Unfold_Linked_List {
         scn.close();
 
         ListNode head = dummy.next;
+        //fold(head);
         unfold(head);
         printList(head);
     }
