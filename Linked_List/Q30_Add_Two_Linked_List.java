@@ -57,7 +57,7 @@ public class Q30_Add_Two_Linked_List {
             int sum = carry + (c1 != null ? c1.val : 0) + (c2 != null ? c2.val : 0);
 
             int lastdigit = sum % 10;
-            carry = lastdigit / 10;
+            carry = sum / 10;
 
             itr.next = new ListNode(lastdigit);
             itr = itr.next;
