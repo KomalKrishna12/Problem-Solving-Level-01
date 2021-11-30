@@ -111,7 +111,6 @@ public class Q28_Unfold_Linked_List {
         scn.close();
 
         ListNode head = dummy.next;
-        //fold(head);
         unfold(head);
         printList(head);
     }
