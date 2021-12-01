@@ -19,7 +19,19 @@ public class Q32_Multiply_Linked_List_No {
         }
         System.out.println();
     }
-    
+
+    public static ListNode reverse(ListNode node) {
+        ListNode prev = null, forw = null;
+        ListNode curr = node;
+        while(curr != null){
+            forw = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = forw;
+        }
+        return prev;
+    }
+
     public static int linklistToNo(ListNode node) {
         int sum = 0;
         int power = 1;
@@ -33,8 +45,12 @@ public class Q32_Multiply_Linked_List_No {
     }
 
     public static int multiply(ListNode l1, ListNode l2) {
+        l1 = reverse(l1);
+        l2 = reverse(l2);
         int prod1 = linklistToNo(l1);
+        System.out.println(prod1);
         int prod2 = linklistToNo(l2);
+        System.out.println(prod2);
         return prod1*prod2;
     }
 
