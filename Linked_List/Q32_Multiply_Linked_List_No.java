@@ -19,6 +19,24 @@ public class Q32_Multiply_Linked_List_No {
         }
         System.out.println();
     }
+    
+    public static int linklistToNo(ListNode node) {
+        int sum = 0;
+        int power = 1;
+        ListNode curr = node;
+        while(curr != null){
+            sum += curr.val * power;
+            power *= 10;
+            curr = curr.next;
+        }
+        return sum;
+    }
+
+    public static int multiply(ListNode l1, ListNode l2) {
+        int prod1 = linklistToNo(l1);
+        int prod2 = linklistToNo(l2);
+        return prod1*prod2;
+    }
 
     public static ListNode makeList(int n) {
         ListNode dummy = new ListNode(-1);
@@ -35,7 +53,12 @@ public class Q32_Multiply_Linked_List_No {
         ListNode head1 = makeList(scn.nextInt());
         ListNode head2 = makeList(scn.nextInt());
 
+        // display linked list
         printList(head1);
         printList(head2);
+
+        int res = multiply(head1, head2);
+        System.out.println(res);
+        
     }
 }
