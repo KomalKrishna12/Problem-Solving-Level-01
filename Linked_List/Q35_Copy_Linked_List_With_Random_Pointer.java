@@ -10,6 +10,8 @@ public class Q35_Copy_Linked_List_With_Random_Pointer {
             this.val = val;
         }
     }
+
+    // this will copy same node in right side of curr val with same val
     public static void copyList(ListNode head) {
         ListNode curr = head;
         while(curr != null){
@@ -22,7 +24,8 @@ public class Q35_Copy_Linked_List_With_Random_Pointer {
         }
     }
 
-    public static ListNode copyRandomPtr(ListNode head) {
+    // it'll will point to that copy node with their random pointer
+    public static void copyRandomPtr(ListNode head) {
         ListNode curr = head;
         while(curr != null){
             ListNode ran = curr.random;
@@ -31,9 +34,9 @@ public class Q35_Copy_Linked_List_With_Random_Pointer {
 
             curr = curr.next.next;
         }
-        return head;
     }
 
+    // it'll extract copy node from prev node
     public static ListNode extract(ListNode head){
         ListNode dummy = new ListNode(-1);
         ListNode prev = dummy, curr = head;
@@ -48,8 +51,11 @@ public class Q35_Copy_Linked_List_With_Random_Pointer {
     }
 
     public static ListNode copyRandomList(ListNode head) {
+        // firstly create copy list
         copyList(head);
-        copyRandomList(head);
+        // assign all random pointer
+        copyRandomPtr(head);
+        // extract from prev nodes and return it
         return extract(head);
     }
 
