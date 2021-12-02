@@ -14,6 +14,13 @@ public class Q36_Is_Cycle_Present_In_Linked_List {
 
   public static boolean isCyclePresentInLL(ListNode head) {
 
+    if(head == null || head.next == null) return false;
+    ListNode slow = head, fast = head;
+    while(fast != null && fast.next != null){
+        slow = slow.next;
+        fast = fast.next.next;
+        if(slow == fast) return true;
+    }
     return false;
   }
 
