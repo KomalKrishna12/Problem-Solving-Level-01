@@ -48,7 +48,9 @@ public class Q35_Copy_Linked_List_With_Random_Pointer {
     }
 
     public static ListNode copyRandomList(ListNode head) {
-        return null;
+        copyList(head);
+        copyRandomList(head);
+        return extract(head);
     }
 
     public static void main(String[] args) {
