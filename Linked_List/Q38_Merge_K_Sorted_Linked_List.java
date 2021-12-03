@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Q34_Merge_K_Sorted_Linked_List {
+public class Q38_Merge_K_Sorted_Linked_List {
     public static Scanner scn = new Scanner(System.in);
 
   public static class ListNode {
