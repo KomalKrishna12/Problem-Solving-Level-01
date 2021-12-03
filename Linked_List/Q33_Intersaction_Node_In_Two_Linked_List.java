@@ -1,5 +1,9 @@
 import java.util.Scanner;
-
+// Here we have given two linked list and we want to return the intersaction node
+// we use floyd cycle method
+// in floyd cycle method we basically find the start node of cycle
+// so we convert this problem two linked list into single cyclic list
+// and after getting the result we break the cycle list into two node
 public class Q33_Intersaction_Node_In_Two_Linked_List{
     public static Scanner scn = new Scanner(System.in);
 
@@ -11,9 +15,34 @@ public class Q33_Intersaction_Node_In_Two_Linked_List{
             this.val = val;
         }
     }
+    
+    public static ListNode startNode(ListNode head){
+        if(head == null || head.next == null) return null;
+        ListNode slow = head, fast = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow == fast) break;
+        }
+        if(slow != fast) return null;
+        slow = head;
+        while(slow != fast){
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return slow;
+    }
 
     public static ListNode IntersectionNodeInTwoLL(ListNode headA, ListNode headB) {
-        return null;
+        if(headA == null || headB == null) return null;
+        ListNode tail = headA;
+        while(tail.next != null){
+            tail = tail.next;
+        }
+        tail.next = headB;
+        ListNode res = startNode(headA);
+        tail.next = null;
+        return res;
     }
 
     // Input_code===================================================
