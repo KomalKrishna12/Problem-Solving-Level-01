@@ -13,16 +13,23 @@ public class Q42_Quicksort_In_Linked_List{
         }
     }
 
+    // here we are segregating nodes of head over pivot
+    // if any node is smaller than equal to pivot then store in smaller list
+    // greater will store in large list
     public static ListNode[] segregateNode(ListNode head, int pivotIdx) {
         ListNode small = new ListNode(-1);
         ListNode large = new ListNode(-1);
         ListNode curr = head, sp = small, lp = large, pivot = head;
+        // here firstly pivot assign to head
+        // run loop till we get pivotidx as zero
+        // at pivot 0 we get our actual pivot node
         while(pivotIdx-- > 0){
             pivot = pivot.next;
         }
 
         while(curr != null){
             if(curr != pivot){
+                // connect smaller and larger node of curr if curr is not equal to pivot
                 if(curr.val <= pivot.val){
                     sp.next = curr;
                     sp = sp.next;
@@ -34,6 +41,8 @@ public class Q42_Quicksort_In_Linked_List{
             }
             curr = curr.next;
         }
+        // after loop make all tail point to next
+        // and return a ListNode array with head of smaller, pivot node and head of larger as element
         sp.next = null;
         pivot.next = null;
         lp.next = null;
