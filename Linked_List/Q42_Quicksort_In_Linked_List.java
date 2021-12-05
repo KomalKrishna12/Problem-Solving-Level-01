@@ -49,6 +49,8 @@ public class Q42_Quicksort_In_Linked_List{
         return new ListNode[]{small.next, pivot, large.next};
     }
 
+    // this function will calculate and return the length of head
+    // which we use in finding the pivot index
     public static int length(ListNode head) {
         int len = 0;
         ListNode curr = head;
@@ -58,6 +60,15 @@ public class Q42_Quicksort_In_Linked_List{
         }
         return len;
     }
+
+    // now this function will merge leftsegment pivot and rightsegment
+    // if head is null or there is only one element
+    // then that element will become our head as well as tail
+    // this will return an array ListNode[] which contains head and tail
+    // left seg 1 2 3    right seg  6 7 8
+    // pivot 5
+    // after merge it'll look like 1 2 3 5 6 7 8
+    // and it'll return 1 as head and 8 as tail
     public static ListNode[] mergeseg(ListNode[] leftseg, ListNode pivot, ListNode[] rightseg) {
         ListNode head = null, tail = null;
         if(leftseg[0] != null && rightseg[0] != null){
