@@ -94,17 +94,25 @@ public class Q48_Add_At_Index_In_Doubly_Linked_List {
           addLastNode(node);
         }
         public void addNodeAt(int index, Node node){
+            // if index == 0 that means we're adding node at first
+            // if index == size that means we're adding node at last
             if(index == 0) addFirstNode(node);
             else if(index == this.size) addLastNode(node);
             else{
+                // forw node will be our node present at index
+                // we can get its previous node using prev
                 Node forw = getNodeAt(index);
                 Node prev = forw.prev;
                 
+                // now prev.next will point to our node and node.next will point to forw
                 prev.next = node;
                 node.prev = prev;
                 
+                // node.next will point to forw and forw.prev will point to node
                 node.next = forw;
                 forw.prev = node;
+
+                // increament the size
                 this.size++;
             }
         }
