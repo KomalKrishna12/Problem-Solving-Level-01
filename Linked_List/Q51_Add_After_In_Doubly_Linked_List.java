@@ -147,6 +147,12 @@ public class Q51_Add_After_In_Doubly_Linked_List{
         }
     
         public void addAfter(Node ref, int data) {
+            // create a node forw which will point to the next node of ref
+            // if forw is null that means ref is tail
+            // so ref.next = node, node.prev = ref
+            // and set tail at new node
+            // else ref.next = node, node.prev = ref, node.next = forw, forw.prev = node
+            // and increase the size by 1 bcoz we're adding a node
             Node forw = ref.next;
             Node node = new Node(data);
             if(forw == null){
