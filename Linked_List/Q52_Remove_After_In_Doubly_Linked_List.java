@@ -250,6 +250,12 @@ public class Q52_Remove_After_In_Doubly_Linked_List {
         }
 
         public Node removeAfterNode(Node ref) {
+            // forw is the next node of ref
+            // if forw.next is null that means forw is tail
+            // so ref.next point to null and forw.prev will be null
+            // else ref.next = forw.next and forw.next.prev = ref
+            // forw.next = forw.prev = null
+            // return forw node and decrement the size by 1
             Node forw = ref.next;
             if(forw.next == null){
                 ref.next = null;
@@ -268,6 +274,7 @@ public class Q52_Remove_After_In_Doubly_Linked_List {
         }
     
         public int removeAfter(Node refNode) {
+            // if ref.next is null that means ref is the tail there is no node after ref
             if(refNode.next == null){
                 System.out.println("LocationisInvalid: ");
                 return -1;
