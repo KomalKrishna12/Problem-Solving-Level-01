@@ -310,6 +310,19 @@ public class Q53_Remove_Node_In_Doubly_Linked_List{
         }
     
         public int removeNode(Node refNode) {
+            // prevNode is the prev node of refNode
+            // forwNode is the next node of refNode
+            // if size is 1 and we can check the size using size variable or 
+            // if prev && forw == null that means their is one node in list that is refNode
+            // so simply set head and tail to null
+            // if prev is null that means refNode is the head
+            // so set head at forw
+            // ref.next and ref.prev will point to null and head.prev will be null
+            // we can put this 4 pointers in last becz in every condition we want to null the next and prev 
+            // of refNode and prev of null will always be null and if we shifted the head so it'll nullify 
+            // its prev node and if we are shifting tail in prev direction than also nullify the next node
+            // if forw is null that means refNode is tail so shift the tail to its prev location
+            // else prev.next point to forw and forw.prev will point to prev
             Node prevNode = refNode.prev;
             Node forwNode = refNode.next;
             if(this.size == 1){
