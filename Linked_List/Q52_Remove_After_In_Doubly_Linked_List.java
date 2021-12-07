@@ -248,10 +248,31 @@ public class Q52_Remove_After_In_Doubly_Linked_List {
           Node node = removeAtNode(index);
           return node.data;
         }
+
+        public Node removeAfterNode(Node ref) {
+            Node forw = ref.next;
+            if(forw.next == null){
+                ref.next = null;
+                forw.prev = null;
+
+                this.tail = ref;
+            }
+            else{
+                ref.next = forw.next;
+                forw.next.prev = ref;
+
+                forw.next = forw.prev = null;
+            }
+            this.size--;
+            return forw;
+        }
     
         public int removeAfter(Node refNode) {
-          // complete your Code
-          return 0;
+            if(refNode.next == null){
+                System.out.println("LocationisInvalid: ");
+                return -1;
+            }
+            return removeAfterNode(refNode).data;
         }
     
         public int removeAfter(int idx) {
