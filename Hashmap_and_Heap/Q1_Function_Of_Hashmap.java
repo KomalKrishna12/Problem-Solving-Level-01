@@ -22,5 +22,15 @@ public class Q1_Function_Of_Hashmap{
         // "Russia" is not available so it'll return null
         System.out.println(hm.get("India"));
         System.out.println(hm.get("Russia"));
+
+        // containKey(key) if key is available then return true else false
+        // "Pak" is not available so it'll return false
+        // same in containValue(value)
+        System.out.println(hm.containsKey("India"));
+        System.out.println(hm.containsKey("Pak"));
+
+        // containValue(value);
+        System.out.println(hm.containsValue(135));
+        System.out.println(hm.containsValue(10));
     }
 }
