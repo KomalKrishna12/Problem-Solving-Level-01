@@ -10,5 +10,8 @@ public class Q1_Function_Of_Hashmap{
         hm.put("China", 200);
         hm.put("Pakistan", 20);
         System.out.println(hm);
+
+        // "pakistan" key is already present so it'll update it's value
+        hm.put("Pakistan", 22);
     }
 }
