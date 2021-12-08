@@ -9,7 +9,7 @@ import java.util.Stack;
 //firstly check all charcters from string using charAt(i) function
 //if ch == ')' that means we want to check duplicasy so if peek() is '(' that means this is extra bracket
 //so print "true" and return
-//if peek() == '(' than we pop stack until we get '(' at last pop again to remove last bracket
+//if peek() != '(' than we pop stack until we get '(' at last pop again to remove last bracket
 //if ch != ')' then push charcters into the stack
 //at end print "false" that means no duplicasy
 public class Q2_Duplicate_Brackets{
