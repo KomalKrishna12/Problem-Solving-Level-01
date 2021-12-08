@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Set;
 
 public class Q1_Function_Of_Hashmap{
     public static void main(String[] args) {
@@ -32,5 +33,16 @@ public class Q1_Function_Of_Hashmap{
         // containValue(value);
         System.out.println(hm.containsValue(135));
         System.out.println(hm.containsValue(10));
+
+        // Set is used to contain a list with key value pair
+        // using keySet() we can set our keys to set 
+        Set<String> set = hm.keySet();
+        System.out.println(set);
+
+        // instead of Set we can create a foreach loop and using keySet display one by one it's value and key
+        for (String str : hm.keySet()) {
+            int val = hm.get(str);
+            System.out.println(str + " " + val);
+        }
     }
 }
