@@ -16,5 +16,11 @@ public class Q1_Function_Of_Hashmap{
         // "pakistan" key is already present so it'll update it's value
         hm.put("Pakistan", 22);
         System.out.println(hm);
+
+        // get(key)
+        // if key is present then it'll return value otherwise null
+        // "Russia" is not available so it'll return null
+        System.out.println(hm.get("India"));
+        System.out.println(hm.get("Russia"));
     }
 }
