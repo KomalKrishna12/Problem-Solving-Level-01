@@ -1,6 +1,9 @@
 import java.util.HashMap;
 import java.util.Scanner;
-
+// N = 7
+// a[] = {2,6,1,9,4,5,3}
+// Output:
+// 6
 public class Q5_Longest_Consecutive_Sequence {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
@@ -32,24 +35,30 @@ public class Q5_Longest_Consecutive_Sequence {
         // and check cond again
         // after loop compare max len with temp len
         // if tmp len is greater then assign max len as temp len and max start point as temp start point
+        int count = 0;
         for (int val : arr) {
             if(hm.get(val) == true){
                 int tempLen = 1;
                 int tempStartPoint = val;
+                int tcount = 1;
                 while(hm.containsKey(val + tempLen)){
                     tempLen++;
+                    tcount++;
                 }
                 if(tempLen > maxLen){
                     maxLen = tempLen;
                     maxStartPoint = tempStartPoint;
+                    count = tcount;
                 }
             }
         }
 
         // now create a for loop start from 0 and till i is less that max length
         // and display max start point + i
+        
         for (int i = 0; i < maxLen; i++) {
             System.out.println(maxStartPoint + i);
         }
+        System.out.println("count : " + count);
     }
 }
