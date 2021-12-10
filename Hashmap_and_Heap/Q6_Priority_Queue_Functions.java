@@ -3,7 +3,7 @@ import java.util.*;
 public class Q6_Priority_Queue_Functions {
     public static void main(String[] args) {
         // by default priority queue given priority to small elements
-        // so in peek small element will be there
+        // so in peek small element will be there.
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         int[] arr = {10, 3, 5, 88, 55};
         
