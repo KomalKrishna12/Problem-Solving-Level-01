@@ -1,4 +1,3 @@
-import java.net.Inet4Address;
 import java.util.*;
 
 public class Q6_Priority_Queue_Functions {
@@ -21,7 +20,7 @@ public class Q6_Priority_Queue_Functions {
 
         // to set max element as priority we write Collections.reverseOrder in PriorityQueue construction
         // while creating its object
-        PriorityQueue<Integer> pq2 = new PriorityQueue<>(Collections.reverseOrder);
+        PriorityQueue<Integer> pq2 = new PriorityQueue<>(Collections.reverseOrder());
         for (int i : arr) {
             pq2.add(i);
         }
