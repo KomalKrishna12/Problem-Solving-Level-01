@@ -2,6 +2,19 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
+// in this question we create a class Pair which is having three int li(list index), di(data index)
+// and val
+// using constructor we're initializing our class
+// this class implements Comparable so we have to give body to compareTo(Pair o) function
+// we're using this for priority queue 
+
+// approach
+// add first element of all lists using Pair class
+// now pq peek is having the least value so craete a while loop
+// run this loop till pq.size() > 0
+// so add peek val of pq and that val's data index will be increamented by 1
+// and now update that pair value and check all element in pq it'll go till end and it'll add
+// small elements one by one in array list
 
 public class Q10_Merge_K_Sorted_Lists {
     public static class Pair implements Comparable<Pair>{
