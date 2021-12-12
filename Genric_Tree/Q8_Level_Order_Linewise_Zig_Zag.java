@@ -111,6 +111,7 @@ public class Q8_Level_Order_Linewise_Zig_Zag {
               if(mainStack.size() == 0){
                   mainStack = childStack;
                   childStack = new Stack<>();
+                  System.out.println();
                   level++;
               }
           }
