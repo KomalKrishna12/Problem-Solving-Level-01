@@ -157,6 +157,34 @@ public class Q7_Level_Order_Traversal_Linewise_More_Approaches{
         System.out.println();
     }
 }
+
+public static class Pair{
+  Node node;
+  int level;
+  Pair(Node node, int level){
+    this.node = node;
+    this.level = level;
+  }
+}
+
+public static void levelOrderLinewise4(Node node) {
+  Queue<Pair> queue = new ArrayDeque<>();
+  queue.add(new Pair(node, 1));
+  int level = 1;
+  while(queue.size() > 0){
+    Pair p = queue.remove();
+    if(p.level > level){
+      level = p.level;
+      System.out.println();
+    }
+
+    System.out.print(p.node.data + " ");
+    for(Node child : p.node.children){
+      Pair pair = new Pair(child, p.level + 1);
+      queue.add(pair);
+    }
+  }
+}
     
       public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -168,6 +196,6 @@ public class Q7_Level_Order_Traversal_Linewise_More_Approaches{
         }
     
         Node root = construct(arr);
-        levelOrderLinewise3(root);
+        levelOrderLinewise4(root);
       }
 }
