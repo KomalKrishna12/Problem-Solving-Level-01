@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+// predecessor is the element before data in preorder and successor is the data after data
 public class Q21_Predecessor_and_successor_in_tree {
     private static class Node {
         int data;
