@@ -79,6 +79,7 @@ public class Q6_Level_Order_Traversal_in_Binary_Queue {
       }
     
       public static void levelOrder(Node node) {
+          // remove -> print -> add children
           Queue<Node> mq = new ArrayDeque<>();
           mq.add(node);
           while(mq.size() > 0){
