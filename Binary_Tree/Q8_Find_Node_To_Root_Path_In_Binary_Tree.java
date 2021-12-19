@@ -80,6 +80,12 @@ public class Q8_Find_Node_To_Root_Path_In_Binary_Tree {
     }
 
     public static boolean find(Node node, int data) {
+        // this includes 5 step
+        // step 1 : if node is null then return false
+        // step 2 : if node.data == data then return true
+        // step 3 : call find using recursion for node.left if that return true then return true
+        // step 4 : repeat step 3 for node.right
+        // step 5 : return false because node is not at node or left or right child
         if (node == null)
             return false;
         if (node.data == data) {
