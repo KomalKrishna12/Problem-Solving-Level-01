@@ -118,7 +118,24 @@ public class Q18_Is_Binary_Search_Tree {
         return th;
       }
     
-     
+      // this is the optimized approach to validate the binary search tree
+      // if the given binary tree is in BST then its inorder will be in sorted order
+      // because in inorder we print LEFT -> NODE -> RIGHT and in inorder left node's max will be
+      // smaller than the node val and its min of right node will be greater than node val
+      // and it apply on each and every node
+      static Node prev = null;
+      public static boolean isValidBST(Node root) {
+          if(root == null) return true;
+          
+          if(!isValidBST(root.left)) return false;
+          
+          if(prev != null && prev.data >= root.data) return false;
+          prev = root;
+          
+          if(!isValidBST(root.right)) return false;
+          
+          return true;
+      }
       
       public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
