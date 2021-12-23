@@ -10,8 +10,29 @@ public class Bubble_sort{
     }
 
     public static int[] bubblesort(int[] arr) {
-        int[] sortedarr = new int[arr.length];
-        return sortedarr;
+        for(int i = 1; i < arr.length; i++){
+            for(int j = 0; j < arr.length - i; j++){
+                if(isSmaller(arr, j + 1, j)){
+                    swap(arr, j + 1, j);
+                }
+            }
+        }
+        return arr;
+    }
+
+    public static void swap(int[] arr, int i, int j){
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+    public static boolean isSmaller(int[] arr, int i, int j){
+        if(arr[i] < arr[j]){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     public static void main(String[] args) {
