@@ -21,12 +21,25 @@ public class Q4_Merge_Two_Sorted_Array {
         int[] res = merge(a, b);
         //display elements of final array
         printArray(res);
+        int j = 0;
+        for (int i = 0; i < res.length; i++) {
+            if(i < a.length){
+                a[i] = res[i];
+            }
+            else if(j < b.length){
+                b[j] = res[i];
+                j++;
+            }
+        }
+        printArray(a);
+        printArray(b);
         scn.close();
     }
     public static void printArray(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+            System.out.print(arr[i] + " ");
         }
+        System.out.println();
     }
     //res array size will be addition of size of first array and second array
     public static int[] merge(int[] a, int[] b) {
