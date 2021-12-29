@@ -97,6 +97,7 @@ public class Q2_Size_sum_max_min_findin_in_BST {
         return totalsum;
     }
 
+    // in BST max node will exist on right side so call max(node.right) till node.right is not null
     public static int max(Node node) {
         if(node.right != null){
             return max(node.right);
@@ -106,6 +107,7 @@ public class Q2_Size_sum_max_min_findin_in_BST {
         }
     }
 
+    // in BST min node will exist on left side so call min(node.left) till node.left is not null
     public static int min(Node node) {
         if(node.left != null){
             return min(node.left);
@@ -115,13 +117,18 @@ public class Q2_Size_sum_max_min_findin_in_BST {
         }
     }
 
+    // in BST, left nodes are lesser that node and right nodes are greater 
+    // if node is null return false
+    // if node data is greater than data then find in left side
+    // if node data is lesser than data then find in right side
+    // else return true 
     public static boolean find(Node node, int data) {
         if(node == null) return false;
         if(node.data > data){
-            return find(node.right, data);
+            return find(node.left, data);
         }
         else if(node.data < data){
-            return find(node.left, data);
+            return find(node.right, data);
         }
         else{
             return true;
