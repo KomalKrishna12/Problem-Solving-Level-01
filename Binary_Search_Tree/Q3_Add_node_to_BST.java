@@ -80,6 +80,9 @@ public class Q3_Add_node_to_BST{
         display(node.right);
       }
     
+      // if data is greater than node.data then call for node.right
+      // if data is lesser than node.data then call for node.left
+      // when node is null create a new node assign value as data and return it
       public static Node add(Node node, int data) {
           if(node == null) return new Node(data, null, null);
           if(data > node.data){
