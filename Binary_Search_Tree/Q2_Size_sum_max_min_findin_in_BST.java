@@ -98,7 +98,7 @@ public class Q2_Size_sum_max_min_findin_in_BST {
     }
 
     public static int max(Node node) {
-        if(node != null){
+        if(node.right != null){
             return max(node.right);
         }
         else{
@@ -107,7 +107,7 @@ public class Q2_Size_sum_max_min_findin_in_BST {
     }
 
     public static int min(Node node) {
-        if(node != null){
+        if(node.left != null){
             return min(node.left);
         }
         else{
