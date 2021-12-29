@@ -86,6 +86,7 @@ public class Q4_Remove_node_from_BST {
       }
     
       public static Node remove(Node node, int data) {
+          if(node == null) return null;
           if(data > node.data){
               node.right = remove(node.right, data);
           }
