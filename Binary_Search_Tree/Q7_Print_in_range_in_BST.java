@@ -77,8 +77,15 @@ public class Q7_Print_in_range_in_BST {
         display(node.left);
         display(node.right);
       }
-    
+
+      public static ArrayList<Integer> print(Node node, int d1, int d2){
+          list = new ArrayList<>();
+          pir(node, d1, d2);
+          return list;
+      }
+    static ArrayList<Integer> list = new ArrayList<>();
       public static void pir(Node node, int d1, int d2){
+          
           if(node == null) return;
           // if node data is greater than both d1 and d2 then call pir for node.left else if lesser than
           // d1 and d2 then call pir for node.right
@@ -89,6 +96,7 @@ public class Q7_Print_in_range_in_BST {
           else{
               pir(node.left, d1, d2);
               System.out.println(node.data);
+              list.add(node.data);
               pir(node.right, d1, d2);
           }
       }
@@ -111,5 +119,7 @@ public class Q7_Print_in_range_in_BST {
     
         Node root = construct(arr);
         pir(root, d1, d2);
+        ArrayList<Integer> list = print(root, d1, d2);
+        System.out.println(list);
       }
 }
