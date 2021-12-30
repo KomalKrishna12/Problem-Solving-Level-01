@@ -126,7 +126,7 @@ public class Q8_Target_sum_pair_second_approach_using_arraylist {
     
         Node root = construct(arr);
         // write your code here
-        target(root, root, data);
+        //target(root, root, data);
         ArrayList<Integer> list = new ArrayList<>();
         target2(root, list);
         // now list conatins all nodes into tree in sorted order
