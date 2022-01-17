@@ -1,18 +1,17 @@
 import java.util.Scanner;
-import java.util.Stack;
 
 public class Infix_calculate {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         String str = scn.next();
-        int val = calculate(str);
-        System.out.println(val);
+        // int val = calculate(str);
+        // System.out.println(val);
         scn.close();
     }
 
-    public static int calculate(String s) {
-        Stack<Integer>
-    }
+    // public static int calculate(String s) {
+    //     //Stack<Integer>
+    // }
 
     public static int precedence(char ch) {
         if(ch == '+' || ch == '-') return 1;
