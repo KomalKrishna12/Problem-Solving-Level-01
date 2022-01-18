@@ -10,7 +10,7 @@ public class Q4_Size_Sum_Maximum_and_Height_In_Binary_Tree{
           this.data = data;
           this.left = left;
           this.right = right;
-        }
+        } 
       }
     
       public static class Pair {
