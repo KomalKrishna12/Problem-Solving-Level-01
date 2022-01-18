@@ -93,6 +93,45 @@ public class Q6_Level_Order_Traversal_in_Binary_Queue {
               System.out.println();
           }
       }
+      
+      // this is level order zig zag traversal
+      // this is same but we want to print in zig zag like if first row is in Left to right then second
+      // will be right to left
+      // so we craeate a flag of boolean type
+      // if flag is true then add list simply if flag is false then reverse the list and add
+      // and change flag value from true to false and false to true
+      public List<List<Integer>> zigzagLevelOrder(Node root) {
+        List<List<Integer>> list = new ArrayList<>();
+        if(root == null) return list;
+        if(root.left == null && root.right == null){
+            List<Integer> sm = new ArrayList<>();
+            sm.add(root.data);
+            list.add(sm);
+            return list;
+        }
+        
+        LinkedList<Node> que = new LinkedList<>();
+        que.add(root);
+        boolean flag = true;
+        
+        while(que.size() != 0){
+            int size = que.size();
+            List<Integer> sm = new ArrayList<>();
+            while(size-- > 0){
+                Node rp = que.removeFirst();
+                sm.add(rp.data);
+                
+                if(rp.left != null) que.addLast(rp.left);
+                if(rp.right != null) que.addLast(rp.right);
+            }
+            if(!flag) 
+            Collections.reverse(sm);
+            list.add(sm);
+            flag = !flag;
+        }
+        
+        return list;
+    }
     
       public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
