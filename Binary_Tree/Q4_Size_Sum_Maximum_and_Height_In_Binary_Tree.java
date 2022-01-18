@@ -78,8 +78,13 @@ public class Q4_Size_Sum_Maximum_and_Height_In_Binary_Tree{
         display(node.right);
       }
     
+      // if root is null return 0 that means their is 0 nodes in binary tree
+      // if root is leaf node then return 1 
+      // now use recursion and store size of left and right tree and at end return sum of left and right and 
+      // add 1 to it
       public static int size(Node node) {
           if(node == null) return 0;
+          if(node.left == null && node.right == null) return 1;
           int leftsize = size(node.left);
           int rightsize = size(node.right);
           int totalsize = leftsize + rightsize + 1;
