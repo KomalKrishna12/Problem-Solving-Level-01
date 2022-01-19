@@ -79,6 +79,9 @@ public class Q7_Iterative_preorder_inorder_postorder_in_Binary_Tree {
         display(node.right);
     }
 
+    // state = 1 preorder (increase state and add left node in stack if exists)
+    // state = 2 inorder  (increase state and add right node in stack if exists)
+    // state = 3 postorder (pop the node beacause left right visted and now node is also visited)
     public static void iterativePrePostInTraversal(Node node) {
         Stack<Pair> st = new Stack<>();
         Pair rootPair = new Pair(node, 1);
