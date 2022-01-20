@@ -1,3 +1,5 @@
+
+
 public class Binary_to_decimal {
     // start reading the string from end char by char
     // if char is 1 then add 1*carry into res
