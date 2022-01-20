@@ -5,9 +5,7 @@ public class Binary_to_decimal {
         int res = 0, carry = 1;
         for(int i = str.length() - 1; i >= 0; i--){
             char ch = str.charAt(i);
-            if(ch == '1'){
-                res += carry;
-            }
+            if(ch == '1') res += carry;
             carry *= 2;
         }
         return res;
