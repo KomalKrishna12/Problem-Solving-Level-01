@@ -1,4 +1,7 @@
 public class Binary_to_decimal {
+    // start reading the string from end char by char
+    // if char is 1 then add 1*carry into res
+    // multiply carry by 2 everytime
     public static int binary_to_decimal(String str)
     {
         // Code here
