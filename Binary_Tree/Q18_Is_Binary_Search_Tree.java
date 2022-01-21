@@ -133,7 +133,6 @@ public class Q18_Is_Binary_Search_Tree {
           prev = root;
           
           if(!isValidBST(root.right)) return false;
-          
           return true;
       }
       
