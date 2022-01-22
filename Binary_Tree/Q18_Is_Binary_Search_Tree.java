@@ -122,8 +122,8 @@ public class Q18_Is_Binary_Search_Tree {
       // if the given binary tree is in BST then its inorder will be in sorted order
       // because in inorder we print LEFT -> NODE -> RIGHT and in inorder left node's max will be
       // smaller than the node val and its min of right node will be greater than node val
-      // and it apply on each and every node 
-      static Node prev = null;
+      // and it apply on each and every node.     
+      static Node prev = null; 
       public static boolean isValidBST(Node root) {
           if(root == null) return true;
           
