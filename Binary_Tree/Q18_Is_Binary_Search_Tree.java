@@ -135,7 +135,7 @@ public class Q18_Is_Binary_Search_Tree {
           if(!isValidBST(root.right)) return false;
           return true;
       }
-      
+       
       public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
