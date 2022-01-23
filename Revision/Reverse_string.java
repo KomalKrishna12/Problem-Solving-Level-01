@@ -10,6 +10,14 @@ public class Reverse_string {
             ri--;
         }
     }
+    public static String reverseWord(String str1)
+    {
+        String str = "";
+        for(int i = str1.length() - 1; i >= 0; i--){
+            str += str1.charAt(i);
+        }
+        return str;
+    }
     public static void display(char[] s){
         for(char ch : s){
             System.out.print(ch + " ");
@@ -21,5 +29,6 @@ public class Reverse_string {
         display(s);
         reverseString(s);
         display(s);
+        System.out.println(reverseWord("abc"));
     }
 }
