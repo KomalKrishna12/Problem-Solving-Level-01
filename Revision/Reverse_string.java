@@ -19,12 +19,12 @@ public class Reverse_string {
         return str;
     }
     public static int reverse(int x){
-        int num = 0;
+        long num = 0;
         while(x > 0){
             num = num * 10 + x % 10;
             x = x/10; 
         }
-        return num;
+        return (int)num;
     }
     public static void display(char[] s){
         for(char ch : s){
