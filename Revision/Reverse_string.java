@@ -18,6 +18,14 @@ public class Reverse_string {
         }
         return str;
     }
+    public static int reverse(int x){
+        int num = 0;
+        while(x > 0){
+            num = num * 10 + x % 10;
+            x = x/10; 
+        }
+        return num;
+    }
     public static void display(char[] s){
         for(char ch : s){
             System.out.print(ch + " ");
@@ -30,5 +38,6 @@ public class Reverse_string {
         reverseString(s);
         display(s);
         System.out.println(reverseWord("abc"));
+        System.out.println(reverse(123));
     }
 }
