@@ -17,7 +17,7 @@ public class Reverse_string {
             str += str1.charAt(i);
         }
         return str;
-    }
+    } 
     public static int reverse(int x){
         long num = 0;
         while(x > 0){
