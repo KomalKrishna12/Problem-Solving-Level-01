@@ -78,6 +78,11 @@ public class Q13_Transform_from_left_cloned_to_normal {
         display(node.right);
       }
     
+      // in this ques we have already given a tree which is left clone we have to normalise the tree
+      // assume using recusrsion left is normalised and right is normalised
+      // while normalising left we have to pass node.left.left becoz between node and it's left
+      // their is a clone so we have node.left.left
+      // now add left with node and right 
       public static Node transBackFromLeftClonedTree(Node node){
           if(node == null) return null;
           Node lc = transBackFromLeftClonedTree(node.left.left);
