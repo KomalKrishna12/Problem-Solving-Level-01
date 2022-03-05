@@ -80,11 +80,19 @@ public class Q12_Transform_to_left_cloned_tree {
     
       public static Node createLeftCloneTree(Node node){
         // write your code here
+        // in left clone tree we create a node between node and it's left node, this will apply for 
+        // all left nodes
+        // so using recursion we can solve this
+        // assume left and right done left cloning and returning left root as lc and right root as rc
+        // now we have to do a single task i.e create a new left node between node and it's left
+        // so create a new node with same data of node and make it's left as lc and right as null
+        // so now this new node left is our node's left which is already clone
+        // now make this new node as our node's left and make right clone with node's right
         if(node == null) return null;
         Node lc= createLeftCloneTree(node.left);
         Node rc = createLeftCloneTree(node.right);
-        Node nn = new Node(node.data, lc, null);
-        node.left = nn;
+        Node nn = new Node(node.data, lc, null); // new node whose left is node's left and right is null
+        node.left = nn; // now this new node is node's left
         node.right = rc;
         return node;
       }
