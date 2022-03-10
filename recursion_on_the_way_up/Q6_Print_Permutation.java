@@ -21,6 +21,7 @@ public class Q6_Print_Permutation {
         //anymore so we'll print the string and which is generated during the recursion process
         if(str.length() == 0){
             System.out.println(ans);
+            return;
         }
 
         //here we pass loop for i = 0 to length - 1 so we can single character which we can add in ans
