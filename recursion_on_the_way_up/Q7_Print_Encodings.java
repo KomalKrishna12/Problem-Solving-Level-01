@@ -32,7 +32,7 @@ public class Q7_Print_Encodings {
             }
         }
         //when string length is greater than 1 we can have two cases - first we get one char 
-        //(check that charater is not '0')and rest 
+        //(check that charater is not '0')and rest of str
         //will be string which we can get by using substring function
 
         //in second case we get string of length two for adding in ans and rest is substring
@@ -46,6 +46,11 @@ public class Q7_Print_Encodings {
                 return;
             }
             else{
+                // suppose ch1 = 'c'
+                // int code = 'c' - '0' = 3
+                // so to convert 3 to character we can 'a' + code - 1
+                // 'a' == 1
+                // char = 1 + 3 - 1 = 3 
                 int chv2 = ch1 - '0';
                 char charV2 = (char)('a' + chv2 - 1);
                 printEncoding(substr, ans + charV2);
