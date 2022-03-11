@@ -35,14 +35,14 @@ public class Q3_N_Queens {
             if(arr[i][j] == 1)
             return false;
         }
-        //second cond is to check diagonal for which row = row - 1 & col = col - 1 and check for the queen
+        //second cond is to check left diagonal for which row = row - 1 & col = col - 1 and check for the queen
         //if queen is there than return false that means we cannot print queen there becoz it can cut another
         //queen
         for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
             if(arr[i][j] == 1)
             return false;
         }
-        //third cond is to check diagonal for which row = row -1 and col = col +1 and check for the queen 
+        //third cond is to check right diagonal for which row = row -1 and col = col +1 and check for the queen 
         //availablity
         for (int i = row - 1, j = col + 1; i >= 0 && j < arr.length; i--, j++) {
             if(arr[i][j] == 1)
