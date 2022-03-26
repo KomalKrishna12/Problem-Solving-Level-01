@@ -10,6 +10,10 @@ public class Q1_Fibonacci_dp{
         System.out.println(fibn);
         scn.close();
     }
+
+    // this is done via recursion
+    // fibonaci of 0 is 0 and 1 is 1
+    // fibonacci of n is (n-1) + (n-2);
     public static int fib(int n) {
         if(n == 0 || n == 1){
             return n;
