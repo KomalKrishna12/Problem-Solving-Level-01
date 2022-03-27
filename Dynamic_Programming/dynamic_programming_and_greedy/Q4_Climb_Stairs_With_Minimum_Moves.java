@@ -16,7 +16,10 @@ public class Q4_Climb_Stairs_With_Minimum_Moves {
         Integer[] dp = new Integer[n + 1];
         dp[n] = 0;
         for (int i = n - 1; i >= 0; i--) {
+            // if arr[i] == 0 that means no jumps can be possible
             if(arr[i] > 0){
+                // min variable is used to store the min moves among all the moves
+                // at end if min is changes that add min by adding 1 into it which is the one move to reach the min move
                 int min = Integer.MAX_VALUE;
                 for (int j = 1 ; j <= arr[i] && i + j < dp.length ; j++) {
                     if(dp[i+j] != null){
