@@ -13,6 +13,12 @@ public class Q4_Climb_Stairs_With_Minimum_Moves {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = scn.nextInt();
         }
+        
+        scn.close();
+        System.out.println(solve(n, arr));
+    }
+
+    public static int solve(int n, int[] arr){
         Integer[] dp = new Integer[n + 1];
         dp[n] = 0;
         for (int i = n - 1; i >= 0; i--) {
@@ -31,7 +37,6 @@ public class Q4_Climb_Stairs_With_Minimum_Moves {
                 }
             }
         }
-        System.out.println(dp[0]);
-        scn.close();
+        return dp[0];
     }
 }
