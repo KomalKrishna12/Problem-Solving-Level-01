@@ -46,7 +46,7 @@ public class Q6_Goldmine {
         // now each box contains it's max gold collection to reach at last column
         // so traverse a loop on first col and check for every row and store max gold collection at first col
         int max = dp[0][0];
-        for(int i = 1; i < n-1; i++){
+        for(int i = 1; i < n; i++){
             if(dp[i][0]>max){
                 max=dp[i][0];
             }
