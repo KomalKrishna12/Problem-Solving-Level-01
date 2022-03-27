@@ -1,5 +1,15 @@
 import java.util.Scanner;
-
+// we have given n*m goldmine in which two walls one at col 0 and other at last col
+// we have to stat from left(0th) and go to right(last) with collecting maximum gold
+// so direction of small problem is at last bcoz from last col we reach destination wall easily
+// so we traverse from last
+// so we put column in outside for loop from end
+// bcoz we want to put values row wise
+// if we are at last col then simply put last arr[i][j] bcoz we are at destination wall
+// if we are at 0th row then we have to option we can traverse at (i,j+1) and (i+1,j+1)
+// if we are at last row we have options (i, j+1) ans (i-1, j+1)
+// ans in rest rows we have three options (i-1,j+1), (i,j+1) and (i+1,j+1)
+// compare all and go to max gold and add current gold 
 public class Q6_Goldmine {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -32,8 +42,9 @@ public class Q6_Goldmine {
                 }
             }
         }
-        //set max at first row and col 0 then compare from second row when any greater elemet found set
-        //max to that element
+        
+        // now each box contains it's max gold collection to reach at last column
+        // so traverse a loop on first col and check for every row and store max gold collection at first col
         int max = dp[0][0];
         for(int i = 1; i < n-1; i++){
             if(dp[i][0]>max){
