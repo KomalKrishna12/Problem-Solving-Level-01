@@ -29,6 +29,20 @@ public class Q2_Climb_Stairs {
         qb[n] = cp;
         return cp;
     }
+    // tabulation approach steps :
+    // step 1 : storage and meaning
+    // create an array of size (n+1)
+    // so arr[n] store ans for n
+    // every nth index store the no of ways to climb from n to 0
+    // step 2 : check the flow of problem
+    // check where is small problem and where is large problem
+    // so at arr[0] we have 1 way and at arr[n] = arr[n-1] + arr[n-2] + arr[n-3] so at n larger problem
+    // direction if left to right
+    // step 3 : fill the array
+    // for arr[0] only 1 ways so store it
+    // for arr[1] there is only arr[0] ways and for arr[2] = arr[1] + arr[0]
+    // so in loop i will be from 3 to n(including)
+    // so arr[n] = arr[n-1] + arr[n-2] + arr[n-3]
     //second method of dynamic programming is tabulation in which we use array without using recursion
     public static int countPathTab(int n) {
         int[] dp = new int[n+1];
