@@ -1,3 +1,5 @@
+// to print all path we simply take a string variable and add src in it
+// after visiting nbr mark it as not visited so that next path can be found
 import java.util.*;
 import java.io.*;
 
