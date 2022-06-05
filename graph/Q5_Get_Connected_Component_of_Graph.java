@@ -34,8 +34,6 @@ public class Q5_Get_Connected_Component_of_Graph {
     
         ArrayList<ArrayList<Integer>> comps = new ArrayList<>();
     
-        // write your code here
-    
-        System.out.println(comps);
+        System.out.println(comps);    
       }
 }
