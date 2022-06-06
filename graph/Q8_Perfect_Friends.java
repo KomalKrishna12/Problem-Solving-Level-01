@@ -70,6 +70,6 @@ public class Q8_Perfect_Friends {
             drawConnectedComponet(graph, edge.n, comp, visited);
           }
         }
-
+ 
   }
 }
