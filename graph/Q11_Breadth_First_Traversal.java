@@ -49,13 +49,14 @@ public class Q11_Breadth_First_Traversal {
       queue.add(new Pair(src, src + ""));
 
       while(queue.size() > 0){
-         // r m* w a*
-         Pair remPair = queue.removeFirst();
+         // r m* w a* : remove mark_visited write add
+         Pair remPair = queue.removeFirst(); // remove
 
          if(visited[remPair.v] == true) continue;
-         visited[remPair.v] = true;
-         System.out.println(remPair.v + "@" + remPair.psf);
+         visited[remPair.v] = true; // mark as visited
+         System.out.println(remPair.v + "@" + remPair.psf); // wrte the path with its vertex
 
+         // add all the nabours of remPair vertex
          for(Edge e : graph.get(remPair.v)){
             if(visited[e.nbr] == false){
                queue.add(new Pair(e.nbr, remPair.psf + e.nbr));
