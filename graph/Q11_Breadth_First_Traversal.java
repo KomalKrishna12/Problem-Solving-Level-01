@@ -43,6 +43,7 @@ public class Q11_Breadth_First_Traversal {
 
       int src = Integer.parseInt(br.readLine());
 
+      // solution :
       boolean[] visited = new boolean[vtces];
 
       ArrayDeque<Pair> queue = new ArrayDeque<>();
@@ -62,7 +63,7 @@ public class Q11_Breadth_First_Traversal {
                queue.add(new Pair(e.nbr, remPair.psf + e.nbr));
             }
          }
-
+ 
       }
    }
 }
