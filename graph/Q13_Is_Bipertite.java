@@ -3,8 +3,8 @@ import java.io.*;
 
 // graph will be bipertite if it devide into two sets and botha are exclusive mutual and includion
 // means if graph is not cyclic then it will be bypertite
-// if graph is cyclic and it has odd vertexes then it'll not cyclic
-// if graph is cyclic and it has even vertexes then it'll be cyclic
+// if graph is cyclic and it has odd vertexes then it'll not bipertite
+// if graph is cyclic and it has even vertexes then it'll be bipertite
 public class Q13_Is_Bipertite {
     static class Edge {
         int src;
