@@ -60,7 +60,7 @@ public class Q18_Iterative_Depth_First_Traversal {
             for(Edge e : graph.get(rem.v)){
                 if(visited[e.nbr] == false){
                     st.push(new Pair(e.nbr, rem.psf + e.nbr));
-                }
+                }  
             }
         }
 
