@@ -80,4 +80,35 @@ public class Q15_Shortest_Path_in_Weights {
         }
         
      }
+     public static void shortestPathWithUnitDistance(ArrayList<ArrayList<Integer>> graph, int V, int src){
+         // craete a distance array which will store min distance from src to each vertex
+         int[] dis = new int[V];
+         Arrays.fill(dis, Integer.MAX_VALUE);
+         // fill max value so after comparison we get min value
+         // now create a queue and add src into queue
+         // add dis[src] = 0
+         // now run while loop till queuq become empty
+         // firstly remove head vertex
+         // now check it's neibours
+         // if their dis[] value is greater than dis[rem] + 1 then replace it with dis[rem] + 1
+         // and add the nabour into queue
+         
+         ArrayDeque<Integer> queue = new ArrayDeque<>();
+         queue.add(src);
+         dis[src] = 0;
+
+         while(queue.size() > 0){
+             Integer rem = queue.removeFirst();
+
+             for(Integer i : graph.get(rem)){
+                 if(dis[i] > dis[rem] + 1){
+                     dis[i] = dis[rem] + 1;
+                     queue.add(i);
+                 }
+             }
+         }
+
+         // now our dis array is filled
+         // now we can get min distance from src to any vertex using this array
+     }
 }
