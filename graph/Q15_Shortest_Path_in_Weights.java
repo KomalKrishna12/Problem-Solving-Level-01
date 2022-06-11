@@ -42,7 +42,7 @@ public class Q15_Shortest_Path_in_Weights {
            graph.add(new ArrayList<>());
         }
   
-        int edges = Integer.parseInt(br.readLine());
+        int edges = Integer.parseInt(br.readLine());  
         for (int i = 0; i < edges; i++) {
            String[] parts = br.readLine().split(" ");
            int v1 = Integer.parseInt(parts[0]);
