@@ -3,7 +3,7 @@ import java.util.*;
 // Prim's algorithmn
 // here we use MST (Minimum Spanning Tree)
 // it is simlar like DIJktra ALgo
-// but here we use acquired vertex instead of psf so it'll add the conecetd vertex
+// but here we use acquired vertex instead of psf so it'll add the connecetd vertex
 // in wt it'll give wt of current edge
 public class Q16_Minimum_wire_required_to_connect_All_Pc {
     static class Edge {
