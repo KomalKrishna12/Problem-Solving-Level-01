@@ -26,6 +26,7 @@ public class Q1_Fibonacci_dp{
     //in this function we store the fibonacci value of a particular n into question bank
     public static int fibmemoized(int n, int[] qb) {
         //0,1,1,2,3,5,8,13,21,34,55........
+        // finbonaci of n = fibonaci of n-1 + fibonaci of n-2
         //if n == 0 or n == 1 then return n beacause for 0th and 1st element of fibonacci series is 0, 1
         if(n == 0 || n == 1){
             return n;
